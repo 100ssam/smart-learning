@@ -60,21 +60,87 @@
 
   <!-- 메인 영역 -->
   <main class="main-wrapper">
-    <div class="placeholder-box">
-      <div class="placeholder-icon">⏳</div>
-      <h2 class="placeholder-title">퀴즈 콘텐츠 오픈 준비 중</h2>
-      <p class="placeholder-text">
-        컴퓨터 일반 빈출 OX 퀴즈(50제)와 스프레드시트 단원별 10제 퀴즈 모듈을 제작 중입니다.<br>
-        지금은 정규 40문항 실전 모의고사를 먼저 이용하실 수 있습니다.
-      </p>
-      <a href="../exams/com2-cbt/index.html" class="btn-primary-hero" style="display: inline-flex;">
-        <span>컴활 2급 실전 CBT 풀러 가기</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-      </a>
+    <div class="cards-grid">
+      <!-- [활성] 컴활 2급 필기 빈출 스피드 OX 퀴즈 카드 -->
+      <article class="learning-card active-card">
+        <div>
+          <div class="card-header-row">
+            <div class="card-icon icon-pink">
+              🎯
+            </div>
+            <span class="card-status-pill status-active">즉시 풀기 가능</span>
+          </div>
+          <div class="card-body">
+            <span class="card-subject">개념 스피드 점검</span>
+            <h3 class="card-title">컴활 2급 필기 빈출 스피드 OX 퀴즈</h3>
+            <p class="card-description">
+              제1과목 컴퓨터 일반(30제)과 제2과목 스프레드시트 일반(30제) 총 60문항 풀에서 10제 스피드런 또는 20제 챌린지를 풀어봅니다.
+              연속 정답 콤보와 실시간 핵심 오답 교정 해설을 제공합니다.
+            </p>
+            <div class="card-meta-list">
+              <span class="meta-chip">⚡ 10제 / 20제 / 전체 풀기</span>
+              <span class="meta-chip">💻 1과목 & 📊 2과목 지원</span>
+              <span class="meta-chip">🔥 연속 정답 콤보</span>
+              <span class="meta-chip">💡 오답 교정 & 다시 풀기</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="./ox/index.html" class="btn-card-start">
+            <span>스피드 OX 퀴즈 시작</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- [준비 중] 스프레드시트 단원별 10제 -->
+      <article class="learning-card pending-card">
+        <div>
+          <div class="card-header-row">
+            <div class="card-icon icon-slate">
+              📊
+            </div>
+            <span class="card-status-pill status-pending">준비 중</span>
+          </div>
+          <div class="card-body">
+            <span class="card-subject">단원별 집중 공략</span>
+            <h3 class="card-title">스프레드시트 함수 & 차트 단원별 10제</h3>
+            <p class="card-description">
+              수험생들이 가장 어려워하는 VLOOKUP, INDEX, MATCH 및 피벗테이블 영역만 10문제씩 집중적으로 풀어보는 4지선다형 단원별 퀴즈입니다.
+            </p>
+            <div class="card-meta-list">
+              <span class="meta-chip">📝 단원별 10문항</span>
+              <span class="meta-chip">🔍 상세 계산 풀이</span>
+              <span class="meta-chip">🔒 개발 진행 중</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn-card-pending" data-pending="true"
+            data-content-title="스프레드시트 함수 & 차트 10제 퀴즈">
+            <span>준비 중인 콘텐츠</span>
+          </button>
+        </div>
+      </article>
     </div>
   </main>
+
+  <!-- '콘텐츠 준비 중' 안내 모달 -->
+  <div class="modal-overlay" id="pending-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-icon-badge">⏳</div>
+      <h3 class="modal-title">콘텐츠 준비 중입니다</h3>
+      <p class="modal-desc">
+        선택하신 <strong id="modal-target-title" style="color: var(--primary-600);">해당 콘텐츠</strong>는<br>
+        현재 정성껏 제작 중입니다. 빠른 시일 내에 오픈하도록 하겠습니다!
+      </p>
+      <button type="button" class="modal-close-btn" data-close-modal>
+        확인하고 닫기
+      </button>
+    </div>
+  </div>
 
   <!-- 푸터 -->
   <footer class="site-footer">
@@ -87,4 +153,3 @@
 </body>
 
 </html>
-

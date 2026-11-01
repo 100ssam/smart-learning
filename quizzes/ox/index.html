@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>컴활 2급 필기 빈출 스피드 OX 퀴즈 - Smart Learning</title>
+  <meta name="description" content="1과목 컴퓨터 일반 및 2과목 스프레드시트 일반 핵심 빈출 문항을 3초 만에 판별하는 스피드 OX 퀴즈">
+
+  <!-- 웹 폰트 (Noto Sans KR) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/ox-style.css">
+</head>
+
+<body>
+  <!-- 상단 공통 헤더 -->
+  <header class="ox-header">
+    <div class="header-inner">
+      <div class="brand-wrap">
+        <a href="../../index.html" class="btn-nav-home" title="스마트러닝 메인으로 이동">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>학습실 홈</span>
+        </a>
+        <a href="../index.html" class="btn-nav-home" style="background: transparent; border-color: rgba(255,255,255,0.15);" title="퀴즈 목록으로 이동">
+          <span>퀴즈룸 목록</span>
+        </a>
+        <h1 class="header-title">
+          컴활 2급 스피드 OX 퀴즈
+          <span class="badge-ox">스피드 개념 복습</span>
+        </h1>
+      </div>
+      <div>
+        <a href="../../exams/com2-cbt/index.html" class="btn-nav-home" style="background: rgba(37,99,235,0.3); border-color: rgba(96,165,250,0.5);" title="실전 CBT 모의고사 응시">
+          <span>실전 CBT</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 메인 인터랙티브 영역 -->
+  <main class="ox-main-container">
+    <!-- =======================================================================
+         1. 퀴즈 설정 화면 (과목 및 문항 수 선택)
+         ======================================================================= -->
+    <section class="setup-card" id="screen-setup">
+      <div class="setup-hero-icon">
+        🎯
+      </div>
+      <h2 class="setup-title">컴활 2급 필기 빈출 OX 퀴즈</h2>
+      <p class="setup-desc">
+        시험에 반복 출제되는 핵심 문장을 빠르게 참(O)/거짓(X)으로 판별하며 헷갈리는 개념을 바로잡으세요!
+      </p>
+
+      <form id="form-setup">
+        <!-- 과목 선택 -->
+        <div class="option-group">
+          <span class="group-label">1. 학습 과목 선택</span>
+          <div class="pill-grid">
+            <div>
+              <input type="radio" id="sub-all" name="subject" value="all" class="choice-radio" checked>
+              <label for="sub-all" class="choice-label">
+                <span class="choice-title">🌟 전과목 종합 OX</span>
+                <span class="choice-sub">1과목 + 2과목 (총 60문항 풀)</span>
+              </label>
+            </div>
+            <div>
+              <input type="radio" id="sub-1" name="subject" value="1" class="choice-radio">
+              <label for="sub-1" class="choice-label">
+                <span class="choice-title">💻 1과목 컴퓨터 일반</span>
+                <span class="choice-sub">하드웨어, 네트워크, 보안 (30문항)</span>
+              </label>
+            </div>
+            <div>
+              <input type="radio" id="sub-2" name="subject" value="2" class="choice-radio">
+              <label for="sub-2" class="choice-label">
+                <span class="choice-title">📊 2과목 스프레드시트</span>
+                <span class="choice-sub">함수, 피벗, 차트, 인쇄 (30문항)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 문항 수 선택 -->
+        <div class="option-group">
+          <span class="group-label">2. 풀이 모드 선택</span>
+          <div class="pill-grid">
+            <div>
+              <input type="radio" id="cnt-10" name="count" value="10" class="choice-radio" checked>
+              <label for="cnt-10" class="choice-label">
+                <span class="choice-title">⚡ 10문항 스피드런</span>
+                <span class="choice-sub">약 2분 소요 / 쉬는 시간 복습</span>
+              </label>
+            </div>
+            <div>
+              <input type="radio" id="cnt-20" name="count" value="20" class="choice-radio">
+              <label for="cnt-20" class="choice-label">
+                <span class="choice-title">🎯 20문항 챌린지</span>
+                <span class="choice-sub">약 4분 소요 / 집중 트레이닝</span>
+              </label>
+            </div>
+            <div>
+              <input type="radio" id="cnt-all" name="count" value="all" class="choice-radio">
+              <label for="cnt-all" class="choice-label">
+                <span class="choice-title">📚 전체 문항 정복</span>
+                <span class="choice-sub">선택 과목 전체 풀기</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-start-quiz" id="btn-start-quiz">
+          <span>스피드 OX 퀴즈 시작하기</span>
+        </button>
+      </form>
+    </section>
+
+    <!-- =======================================================================
+         2. 퀴즈 진행 화면
+         ======================================================================= -->
+    <section class="quiz-screen hidden" id="screen-quiz">
+      <!-- 상태바 & 진행도 -->
+      <div class="status-bar-card">
+        <div class="progress-info">
+          <span class="q-current-num" id="q-current-num">1</span>
+          <span class="q-total-num" id="q-total-num">/ 10</span>
+        </div>
+        <div class="streak-indicator" id="streak-indicator">
+          <span>🔥</span>
+          <strong id="streak-count">0</strong>
+          <span>연속 정답!</span>
+        </div>
+      </div>
+
+      <!-- 프로그레스 바 트랙 -->
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+
+      <!-- 문항 카드 -->
+      <div class="statement-card" id="statement-card">
+        <div class="card-top-meta">
+          <span class="subject-tag" id="subject-tag">컴퓨터 일반</span>
+          <span class="topic-tag" id="topic-tag">주기억장치</span>
+        </div>
+        <div class="statement-text" id="statement-text">
+          문제를 불러오는 중입니다...
+        </div>
+      </div>
+
+      <!-- 대형 O / X 선택 버튼 -->
+      <div class="actions-grid">
+        <button type="button" class="btn-ox btn-o" id="btn-o" aria-label="참(O) 선택">
+          <span class="ox-symbol">⭕</span>
+          <span class="ox-label">그렇다 (O)</span>
+          <span class="ox-keyhint">단축키: O 또는 ←</span>
+        </button>
+
+        <button type="button" class="btn-ox btn-x" id="btn-x" aria-label="거짓(X) 선택">
+          <span class="ox-symbol">❌</span>
+          <span class="ox-label">아니다 (X)</span>
+          <span class="ox-keyhint">단축키: X 또는 →</span>
+        </button>
+      </div>
+
+      <!-- 실시간 정오답 피드백 박스 -->
+      <div class="feedback-box" id="feedback-box">
+        <div class="feedback-header">
+          <div class="result-badge" id="feedback-badge">
+            ⭕ 정답입니다!
+          </div>
+        </div>
+
+        <!-- 오답인 경우 교정 팁 -->
+        <div class="correction-banner hidden" id="correction-banner">
+          <div class="correction-title">
+            <span>⚠️ 핵심 오답 교정 포인트</span>
+          </div>
+          <div class="correction-text" id="correction-text">
+            -
+          </div>
+        </div>
+
+        <div class="explanation-text" id="explanation-text">
+          -
+        </div>
+
+        <button type="button" class="btn-next-question" id="btn-next-question">
+          <span>다음 문제 풀기 (Space)</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. 퀴즈 결과 화면 (성적표)
+         ======================================================================= -->
+    <section class="results-card hidden" id="screen-results">
+      <div class="results-icon">
+        🏆
+      </div>
+      <h2 class="results-title">OX 퀴즈를 모두 완료했습니다!</h2>
+      <p class="results-desc">문항별 결과를 점검하고 틀린 문제를 복습해 보세요.</p>
+
+      <div class="score-stats-grid">
+        <div class="stat-box">
+          <div class="stat-label">총 푼 문제</div>
+          <div class="stat-value" id="stat-total">10</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">맞힌 문제 (⭕)</div>
+          <div class="stat-value green" id="stat-correct">8</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">틀린 문제 (❌)</div>
+          <div class="stat-value red" id="stat-wrong">2</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">정답률</div>
+          <div class="stat-value blue" id="stat-rate">80%</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">최대 연속 정답</div>
+          <div class="stat-value" id="stat-streak" style="color: #b45309;">🔥 5회</div>
+        </div>
+      </div>
+
+      <!-- 오답 목록 (틀린 문제가 있을 때 노출) -->
+      <div class="wrong-list-container hidden" id="wrong-list-container">
+        <h3 class="wrong-list-title">
+          <span>📌 틀린 문제 오답노트 & 해설</span>
+        </h3>
+        <div id="wrong-items-list">
+          <!-- 오답 항목 동적 렌더링 -->
+        </div>
+      </div>
+
+      <div class="results-actions">
+        <button type="button" class="btn-res-action btn-res-retry-wrong hidden" id="btn-retry-wrong">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 4v6h6"></path>
+            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+          </svg>
+          <span>틀린 문제만 다시 풀기</span>
+        </button>
+
+        <button type="button" class="btn-res-action btn-res-restart" id="btn-restart">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+          </svg>
+          <span>처음부터 다시 풀기</span>
+        </button>
+
+        <a href="../../index.html" class="btn-res-action btn-res-home">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>학습실 메인으로</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 문제은행 데이터 및 앱 로직 스크립트 -->
+  <script src="./js/ox-questions.js"></script>
+  <script src="./js/ox-app.js"></script>
+</body>
+
+</html>
+
