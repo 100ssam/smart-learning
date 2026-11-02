@@ -1017,3 +1017,59 @@ a {
   }
 }
 
+
+/* 밝은 학습실 테마: 라벤더 · 민트 · 크림 */
+:root {
+  --primary-50: #f5f1ff; --primary-100: #e9e1ff; --primary-200: #d6c8fa;
+  --primary-500: #8067db; --primary-600: #6950c5; --primary-700: #5740aa;
+  --primary-800: #493589; --primary-900: #392967;
+  --text-primary: #332d48; --text-secondary: #625c73; --text-muted: #706981;
+  --bg-body: #fcfbf8; --bg-card: #fff;
+  --radius-lg: 18px; --radius-xl: 24px;
+  --shadow-md: 0 6px 22px rgba(83, 65, 119, .07);
+  --shadow-lg: 0 12px 32px rgba(83, 65, 119, .10);
+}
+body { background: #fcfbf8; }
+.site-header { background: rgba(255,255,255,.96); color: #41365b; border-bottom: 1px solid #ebe5f4; box-shadow: 0 3px 16px #6950c508; }
+.brand-icon { background: linear-gradient(140deg,#8c6cda,#62b9ae); box-shadow: 0 4px 12px #8067db25; border-radius: 13px; }
+.brand-title { background: none; -webkit-text-fill-color: #493869; color: #493869; }
+.brand-badge { color: #6750ab; background: #f1eaff; border-color: #e2d7f7; }
+.nav-link { color: #685e7d; }
+.nav-link:hover, .nav-link.active { background: #f3edff; color: #5e43af; }
+.nav-link.nav-cta { color: #fff; }
+.mobile-menu-btn { color: #5d4d79; }
+.mobile-nav-drawer { background: #fff; border-color: #ece5f5; }
+.mobile-nav-link { color: #55476b; }
+.mobile-nav-link:hover { background: #f4efff; }
+.hero-section, .subpage-hero { background: linear-gradient(115deg,#f2ecff 0%,#e9f9f2 58%,#fff4dc 100%); color: #352c4d; border-bottom: 1px solid #e6e9df; }
+.hero-section::after { background: radial-gradient(circle,#c7b6f34d 0%,transparent 68%); }
+.hero-pill { background: #ffffffc7; color: #65509b; border-color: #ddd5ed; }
+.hero-title { color: #392f52; }
+.hero-title .highlight { background: linear-gradient(110deg,#7454bc,#187e73); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-desc { color: #655e74; font-weight: 400; }
+.btn-primary-hero { background: linear-gradient(135deg,#8063d3,#6750bd); box-shadow: 0 6px 18px #7552c72b; }
+.btn-primary-hero:hover { background: #6044b4; }
+.btn-secondary-hero { background: #ffffffdc; color: #5b468c; border-color: #dcd0f0; }
+.btn-secondary-hero:hover { background: #fff; border-color: #a48bcf; }
+.hero-features { border-top-color: #dce4dd; }
+.feature-item { color: #625875; }
+.feature-icon-wrapper { background: #ffffffbe; color: #7160b0; }
+.feature-text strong { color: #433858; }
+.feature-text span { color: #706781; }
+.filter-btn.active { background: #7356c4; border-color: #7356c4; }
+.learning-card { border-color: #e9e3f0; box-shadow: 0 4px 18px #59427908; }
+.learning-card.active-card { border-color: #d7c7f0; background: linear-gradient(155deg,#fff,#fbf8ff); }
+.learning-card.active-card:hover { border-color: #a88bd7; box-shadow: 0 12px 28px #7454bc1a; }
+.section-title, .card-title { color: #3e3553; }
+.subpage-back { color: #685098; }
+.subpage-back:hover { color: #4b327e; }
+.site-footer { background: #f2edf8; color: #6a617a; border-top: 1px solid #e5dced; }
+.footer-top { border-bottom-color: #ded5e8; }
+.footer-brand-title, .footer-col-title { color: #514365; }
+.footer-link { color: #6c607d; }
+.footer-link:hover { color: #6043a3; }
+button:focus-visible, a:focus-visible { outline: 3px solid #9d81d7; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
