@@ -1714,3 +1714,54 @@ body {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+
+/* 신규 연습문제의 자체 제작 그림: 별도 이미지 파일 불필요 */
+.q-figure { margin: 1rem 0; max-width: 100%; }
+.q-figure[hidden] { display: none; }
+.question-figure { display: block; max-width: 100%; height: auto; border-radius: 8px; }
+
+/* 밝은 CBT 학습실: 문제의 가독성과 시험 진행 방식 유지 */
+:root {
+  --bg-page: #fbfaf7; --text-main: #332e44; --text-muted: #6e667c;
+  --blue-600: #7054c4; --blue-700: #5c42ac; --blue-500: #8d70d7;
+  --blue-100: #e9dfff; --blue-50: #f7f2ff;
+  --border-light: #e6e0ed; --border-medium: #d7cce4;
+  --radius-md: 14px; --radius-lg: 22px;
+  --shadow-md: 0 6px 22px rgba(85,65,110,.07);
+}
+body { background: linear-gradient(145deg,#fcfaf7,#f5f1fc 65%,#f0faf5); }
+.app-header { background: #fffffff5; color: #433554; border-bottom: 1px solid #e5ddec; box-shadow: 0 3px 16px #6950c508; }
+.brand-title { color: #49395f; }
+.brand-icon { background: linear-gradient(135deg,#9173d3,#66b4aa); }
+.btn-home-link { background: #f4effb; border-color: #e0d5ef; color: #604f7b; }
+.btn-home-link:hover { background: #eae0f8; color: #493267; }
+.exam-badge, .candidate-tag { background: #f0eafa; color: #655184; }
+.candidate-tag .tag-label { color: #786987; }
+.timer-box { background: #fff6df; border-color: #eddbab; }
+.timer-caption { color: #816b37; }
+.timer-digits { color: #765c19; }
+.timer-box.timer-warning { background: #fff0ee; }
+.timer-box.timer-warning .timer-digits { color: #bd343b; }
+.start-banner { background: linear-gradient(115deg,#eee5ff,#e6f6ef 65%,#fff4dc); color: #403350; }
+.notice-badge { background: #ffffffba; color: #6d518f; border: 1px solid #dacfed; }
+.start-desc { color: #665b76; }
+.start-card, .question-card, .review-card, .retry-card { box-shadow: 0 6px 24px #59427909; }
+.info-grid, .privacy-note { background: #faf7ff; }
+.btn-primary { background: linear-gradient(135deg,#8567d5,#6b4fbc); border-color: #7456c3; }
+.btn-primary:hover { background: #6246b0; }
+.sub-tab.active, .filter-chip.active { background: #7960bb; border-color: #7960bb; }
+.filter-chip.chip-wrong.active { background: var(--danger-600); border-color: var(--danger-600); }
+.option-item { border-radius: 16px; }
+.option-item:hover { background: #faf7ff; border-color: #b7a2db; }
+.option-item.selected { background: #f3edff; border-color: #9777d1; box-shadow: 0 0 0 1px #9777d1; }
+.option-item.selected .opt-num { background: #7957bd; }
+.total-box { background: linear-gradient(125deg,#eee4ff,#e9f7ef); color: #49355d; border: 1px solid #dfd5ee; }
+.total-box .box-caption { color: #756581; }
+.big-score .score-val { color: #7251ad; }
+.big-score .score-max { color: #7e6e89; }
+.app-footer { background: #f2edf7; color: #70647e; border-top-color: #e5ddec; }
+.footer-sub { color: #776d82; }
+button:focus-visible, a:focus-visible { outline: 3px solid #9d81d7; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
