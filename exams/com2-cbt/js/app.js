@@ -458,6 +458,16 @@
 
     // 지문 텍스트
     elements.qViewText.textContent = qData.question;
+    // 직접 제작한 표·차트는 문제 데이터 안의 그림으로 표시합니다.
+    let figure = document.getElementById('q-view-figure');
+    if (!figure) {
+      figure = document.createElement('div');
+      figure.id = 'q-view-figure';
+      figure.className = 'q-figure';
+      elements.qViewText.insertAdjacentElement('afterend', figure);
+    }
+    figure.innerHTML = qData.figureHtml || '';
+    figure.hidden = !qData.figureHtml;
 
     // 코드 블록 또는 수식이 있는 경우 표시
     if (qData.codeBlock) {
@@ -681,6 +691,7 @@
         subject: q.subject,
         subjectCode: q.subjectCode,
         question: q.question,
+        figureHtml: q.figureHtml || '',
         options: q.options,
         answer: q.answer,
         userAnswer: selected,
@@ -835,6 +846,7 @@
         </div>
 
         <h4 class="rc-question">${item.question}</h4>
+        ${item.figureHtml ? `<div class="q-figure">${item.figureHtml}</div>` : ''}
 
         <div class="rc-answer-summary">
           <div class="as-item">
@@ -926,6 +938,7 @@
           </div>
         </div>
         <p class="q-text" style="margin-bottom: 1.25rem;">${q.question}</p>
+        ${q.figureHtml ? `<div class="q-figure">${q.figureHtml}</div>` : ''}
         <div class="retry-options" style="display:flex; flex-direction:column; gap:8px;">
           ${optionsHtml}
         </div>

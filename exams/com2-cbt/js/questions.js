@@ -1,3 +1,4 @@
+// 전체 100문항: 기존 60문항 + 신규 연습문제 40문항(직접 제작한 그림 문제 10개 포함).
 /**
  * 컴퓨터활용능력 2급 필기 정규 시험용 문제은행 데이터 (총 60문항 풀)
  * - 제1과목 컴퓨터 일반: 30문항 (ID: com_01 ~ com_30)
@@ -1214,6 +1215,818 @@ const QUESTION_BANK = [
       "② [정답] 값의 단위 차이가 현격한 두 계열을 시각화할 때 보조 축을 추가하는 이중 축 혼합 차트를 작성합니다.",
       "③ [오답] 차트는 수치 데이터를 시각화하는 도구이며 단순 텍스트 표는 차트 대상이 아닙니다.",
       "④ [오답] 동일 단위의 단순 나열은 일반 단일 막대 차트로 충분합니다."
+    ]
+  },
+
+  // 독립적으로 작성한 연습문제 40개: com_31~50, spr_31~50
+  {
+    "id": "com_31",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "자료의 상태를 5비트 이진수 11101로 저장했다. 이 값을 십진수로 변환한 결과는?",
+    "options": [
+      "29",
+      "27",
+      "30",
+      "31"
+    ],
+    "answer": 1,
+    "explanation": "11101₂ = 16 + 8 + 4 + 0 + 1 = 29입니다.",
+    "optionExplanations": [
+      "1번 [정답] 값이 1인 자리의 가중치 16, 8, 4, 1을 더하면 29입니다.",
+      "2번 [오답] 27의 5비트 표현은 11011입니다.",
+      "3번 [오답] 30의 5비트 표현은 11110입니다.",
+      "4번 [오답] 31은 다섯 자리가 모두 1인 11111입니다."
+    ]
+  },
+  {
+    "id": "com_32",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "1 KiB를 1,024바이트로 계산할 때, 크기가 3 KiB인 데이터는 몇 바이트인가?",
+    "options": [
+      "3,000바이트",
+      "3,072바이트",
+      "2,048바이트",
+      "24,576바이트"
+    ],
+    "answer": 2,
+    "explanation": "3 × 1,024 = 3,072바이트입니다. KiB는 1,024바이트 단위입니다.",
+    "optionExplanations": [
+      "1번 [오답] 문제에서 제시한 1,024바이트 기준을 적용하지 않은 값입니다.",
+      "2번 [정답] 1,024바이트 세 묶음이므로 3,072바이트입니다.",
+      "3번 [오답] 2 KiB에 해당하는 크기입니다.",
+      "4번 [오답] 3,072바이트를 비트로 환산한 수치이며, 바이트 수가 아닙니다."
+    ]
+  },
+  {
+    "id": "com_33",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "다양한 언어의 문자를 저장하는 문자 인코딩 UTF-8에 관한 설명으로 옳은 것은?",
+    "options": [
+      "모든 문자를 항상 1바이트로 저장한다.",
+      "영문자와 한글에 동일한 2바이트를 고정 배정한다.",
+      "문자에 따라 사용하는 바이트 수가 달라진다.",
+      "문자의 모양을 확대하기 위한 그래픽 압축 규격이다."
+    ],
+    "answer": 3,
+    "explanation": "UTF-8은 가변 길이 문자 인코딩입니다. 예를 들어 기본 ASCII 문자는 1바이트, 일반적인 한글 음절은 3바이트로 표현합니다.",
+    "optionExplanations": [
+      "1번 [오답] UTF-8은 모든 문자를 1바이트로 표현하지 않습니다.",
+      "2번 [오답] UTF-8은 2바이트 고정 길이 인코딩이 아닙니다.",
+      "3번 [정답] 코드 포인트에 따라 1~4바이트로 인코딩합니다.",
+      "4번 [오답] UTF-8은 문자 인코딩으로, 그림의 확대나 압축 규격이 아닙니다."
+    ]
+  },
+  {
+    "id": "com_34",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "작성한 소스 코드 전체를 번역하여 실행에 사용할 목적 코드 등을 만드는 프로그램은?",
+    "options": [
+      "스프레드시트",
+      "장치 드라이버",
+      "압축 해제 프로그램",
+      "컴파일러"
+    ],
+    "answer": 4,
+    "explanation": "컴파일러는 소스 코드를 번역하여 목적 코드 등을 생성하는 언어 번역 프로그램입니다.",
+    "optionExplanations": [
+      "1번 [오답] 표 계산을 위한 응용 프로그램입니다.",
+      "2번 [오답] 운영체제가 특정 장치를 제어할 수 있도록 돕습니다.",
+      "3번 [오답] 압축한 파일을 원래 데이터로 복원합니다.",
+      "4번 [정답] 소스 프로그램을 다른 형태의 코드로 번역합니다."
+    ]
+  },
+  {
+    "id": "com_35",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "한 개의 CPU 코어에서 문서 편집기와 음악 재생기가 번갈아 CPU를 사용하여 함께 실행되는 것처럼 보인다. 이와 가장 관련 있는 운영체제 기능은?",
+    "options": [
+      "멀티태스킹",
+      "파일 압축",
+      "디스크 포맷",
+      "문자 인코딩"
+    ],
+    "answer": 1,
+    "explanation": "멀티태스킹은 여러 작업에 CPU 시간을 나누어 주어 작업들이 함께 진행되도록 관리합니다. 단일 코어에서도 작업 전환으로 구현할 수 있습니다.",
+    "optionExplanations": [
+      "1번 [정답] CPU 실행 시간을 여러 작업에 배분하는 기능입니다.",
+      "2번 [오답] 저장 공간을 줄이도록 데이터 표현을 바꾸는 작업입니다.",
+      "3번 [오답] 저장 장치에 파일 시스템을 준비하는 작업입니다.",
+      "4번 [오답] 문자를 저장할 코드로 대응시키는 방식입니다."
+    ]
+  },
+  {
+    "id": "com_36",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "같은 프로세스 안의 여러 스레드에 관한 일반적인 설명으로 옳은 것은?",
+    "options": [
+      "각 스레드는 반드시 서로 다른 컴퓨터에서 실행된다.",
+      "프로세스의 코드와 데이터 영역을 공유할 수 있다.",
+      "스레드를 추가하면 언제나 실행 속도가 정확히 두 배가 된다.",
+      "스레드는 네트워크 주소를 배정하는 장치이다."
+    ],
+    "answer": 2,
+    "explanation": "같은 프로세스의 스레드는 코드·데이터 등 자원을 공유하면서 실행 흐름을 나눕니다. 실행 속도 향상 정도는 작업과 실행 환경에 따라 다릅니다.",
+    "optionExplanations": [
+      "1번 [오답] 하나의 프로세스 안에서 여러 스레드가 실행될 수 있습니다.",
+      "2번 [정답] 같은 프로세스의 자원을 공유하는 것이 스레드의 특징입니다.",
+      "3번 [오답] 공유 자원 경합이나 코어 수 등에 따라 성능이 달라집니다.",
+      "4번 [오답] 스레드는 실행의 단위이며 네트워크 장치가 아닙니다."
+    ]
+  },
+  {
+    "id": "com_37",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "월요일에 전체 백업을 하고, 화요일에는 월요일 이후 바뀐 파일만, 수요일에는 화요일 백업 이후 바뀐 파일만 저장했다. 이 방식은?",
+    "options": [
+      "매일 전체 백업",
+      "매일 차등 백업",
+      "증분 백업",
+      "손실 압축"
+    ],
+    "answer": 3,
+    "explanation": "증분 백업은 가장 최근 백업 이후 변경된 데이터를 저장합니다. 차등 백업은 가장 최근 전체 백업 이후의 변경분을 누적하여 저장합니다.",
+    "optionExplanations": [
+      "1번 [오답] 전체 백업이라면 변경 여부와 관계없이 백업 대상 전체를 저장합니다.",
+      "2번 [오답] 차등 백업의 기준은 직전 전체 백업입니다.",
+      "3번 [정답] 직전 백업 이후 변경된 파일만 저장했으므로 증분 백업입니다.",
+      "4번 [오답] 압축 방식의 구분으로, 변경 파일의 백업 기준과 다릅니다."
+    ]
+  },
+  {
+    "id": "com_38",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "파일을 압축한 뒤 해제했을 때 원래 데이터와 한 비트도 다르지 않게 복원해야 한다. 선택해야 하는 방식은?",
+    "options": [
+      "해상도 축소",
+      "손실 압축",
+      "색상 수 감소",
+      "무손실 압축"
+    ],
+    "answer": 4,
+    "explanation": "무손실 압축은 압축을 해제하면 원래 데이터를 그대로 복원할 수 있는 방식입니다.",
+    "optionExplanations": [
+      "1번 [오답] 픽셀 정보를 줄이므로 원래 자료를 그대로 복원하는 방법이 아닙니다.",
+      "2번 [오답] 일부 정보를 버릴 수 있어 원본과 완전하게 같다고 보장하지 않습니다.",
+      "3번 [오답] 기존 색상 정보를 잃을 수 있습니다.",
+      "4번 [정답] 원래 데이터를 정확하게 복원하도록 압축합니다."
+    ]
+  },
+  {
+    "id": "com_39",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "브라우저에 서버의 도메인 이름을 입력했다. 해당 이름에 대응하는 IP 주소를 알아내는 데 직접 관련된 서비스는?",
+    "options": [
+      "DNS",
+      "파일 조각 모음",
+      "OCR",
+      "스풀링"
+    ],
+    "answer": 1,
+    "explanation": "DNS는 도메인 이름에 대한 IP 주소 등의 정보를 조회하는 서비스입니다.",
+    "optionExplanations": [
+      "1번 [정답] 이름을 사용하여 필요한 주소 정보 등을 조회합니다.",
+      "2번 [오답] 저장 장치의 파일 배치와 관련된 작업입니다.",
+      "3번 [오답] 이미지 속 문자를 인식하는 기술입니다.",
+      "4번 [오답] 출력 작업 등을 임시 저장하여 순차 처리하는 방식입니다."
+    ]
+  },
+  {
+    "id": "com_40",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "교실 컴퓨터가 네트워크에 연결될 때 IP 주소 등 통신 설정을 자동으로 할당받게 하려 한다. 가장 직접적으로 관련된 프로토콜은?",
+    "options": [
+      "SMTP",
+      "DHCP",
+      "IMAP",
+      "FTP"
+    ],
+    "answer": 2,
+    "explanation": "DHCP는 클라이언트에 IP 주소와 기타 네트워크 설정 정보를 자동으로 제공하는 데 사용됩니다.",
+    "optionExplanations": [
+      "1번 [오답] 메일 발송·전달에 사용됩니다.",
+      "2번 [정답] IP 주소 등 네트워크 설정의 자동 할당과 관련됩니다.",
+      "3번 [오답] 메일 서버의 메시지에 접근하고 관리하는 데 사용됩니다.",
+      "4번 [오답] 파일 전송에 사용됩니다."
+    ]
+  },
+  {
+    "id": "com_41",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "다음 IPv4 주소 중 사설 주소 범위에 속하는 것은?",
+    "options": [
+      "8.8.8.8",
+      "1.1.1.1",
+      "192.168.24.7",
+      "9.9.9.9"
+    ],
+    "answer": 3,
+    "explanation": "192.168.0.0~192.168.255.255는 사설 IPv4 주소 범위입니다. 사설 주소는 내부 네트워크에서 사용되며 공용 인터넷에서 직접 라우팅되지 않습니다.",
+    "optionExplanations": [
+      "1번 [오답] 사설 IPv4 주소 범위에 속하지 않습니다.",
+      "2번 [오답] 사설 IPv4 주소 범위에 속하지 않습니다.",
+      "3번 [정답] 192.168.0.0/16 사설 주소 범위에 포함됩니다.",
+      "4번 [오답] 사설 IPv4 주소 범위에 속하지 않습니다."
+    ]
+  },
+  {
+    "id": "com_42",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "웹 주소가 HTTPS로 시작하는 사이트를 이용할 때의 판단으로 가장 적절한 것은?",
+    "options": [
+      "HTTPS이면 판매자가 반드시 신뢰할 수 있는 사업자이다.",
+      "HTTPS이면 입력한 개인정보를 운영자가 절대로 볼 수 없다.",
+      "HTTPS이면 접속 장치의 악성코드가 자동으로 제거된다.",
+      "통신 보호와 별개로 사이트의 신뢰성도 확인해야 한다."
+    ],
+    "answer": 4,
+    "explanation": "HTTPS는 전송 구간의 보호에 관련됩니다. HTTPS 사용만으로 사이트 운영자의 신뢰성이나 거래의 정당성까지 보장되지는 않습니다.",
+    "optionExplanations": [
+      "1번 [오답] HTTPS 인증만으로 판매자의 신뢰성을 보장하지 않습니다.",
+      "2번 [오답] 사이트 서버는 사용자가 제출한 데이터를 처리할 수 있습니다.",
+      "3번 [오답] 접속 장치의 악성코드를 치료하는 기능이 아닙니다.",
+      "4번 [정답] 통신 보호와 사이트 운영자의 신뢰성을 구분해야 합니다."
+    ]
+  },
+  {
+    "id": "com_43",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "같은 해시 알고리즘으로 계산한 배포자의 원본 파일 해시값과 다운로드한 파일의 해시값이 다르다. 가장 직접적으로 의심할 수 있는 것은?",
+    "options": [
+      "다운로드한 파일의 내용이 원본과 다르다.",
+      "다운로드한 컴퓨터의 화면 해상도가 낮다.",
+      "파일을 저장한 폴더의 이름이 길다.",
+      "운영체제의 표시 언어가 달라졌다."
+    ],
+    "answer": 1,
+    "explanation": "같은 해시 알고리즘을 적용했다는 조건에서 값이 다르면 파일의 내용이 서로 다릅니다. 전송 오류나 파일 변경 여부 등을 점검해야 합니다.",
+    "optionExplanations": [
+      "1번 [정답] 신뢰할 수 있는 원본 해시와 비교하여 내용 변경을 탐지할 수 있습니다.",
+      "2번 [오답] 화면 해상도는 파일 내용의 해시와 직접 관련이 없습니다.",
+      "3번 [오답] 파일 내용에 대한 해시는 저장 폴더 이름을 대상으로 계산하지 않습니다.",
+      "4번 [오답] 표시 언어 변경 자체가 저장된 파일 내용의 해시를 바꾸지는 않습니다."
+    ]
+  },
+  {
+    "id": "com_44",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "서로 다른 종류의 인증 요소를 결합한 예로 가장 적절한 것은?",
+    "options": [
+      "비밀번호와 같은 비밀번호 재입력",
+      "비밀번호와 본인이 소지한 보안 키",
+      "비밀번호와 기억해 둔 추가 질문의 정답",
+      "첫 번째 비밀번호와 두 번째 비밀번호"
+    ],
+    "answer": 2,
+    "explanation": "비밀번호는 지식 요소, 본인이 소지한 보안 키는 소유 요소입니다. 다른 종류의 인증 요소를 결합해야 합니다.",
+    "optionExplanations": [
+      "1번 [오답] 같은 정보를 두 번 입력하므로 요소 종류가 늘어나지 않습니다.",
+      "2번 [정답] 알고 있는 정보와 소지한 물건이라는 다른 종류의 요소를 결합합니다.",
+      "3번 [오답] 둘 다 사용자가 알고 있는 정보에 해당합니다.",
+      "4번 [오답] 둘 다 지식 요소에 해당합니다."
+    ]
+  },
+  {
+    "id": "com_45",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "여러 장치가 한 서버에 대량의 요청을 보내 정상 사용자가 서비스를 이용하지 못하게 했다. 주로 침해된 보안 속성은?",
+    "options": [
+      "정보의 압축률",
+      "문자의 가독성",
+      "서비스의 가용성",
+      "화면의 색 재현성"
+    ],
+    "answer": 3,
+    "explanation": "가용성은 권한 있는 사용자가 필요할 때 정보나 서비스를 이용할 수 있는 성질입니다. 서비스 거부 공격은 주로 가용성을 방해합니다.",
+    "optionExplanations": [
+      "1번 [오답] 압축률은 보안의 가용성 개념이 아닙니다.",
+      "2번 [오답] 글자를 읽기 쉬운 정도와는 다른 문제입니다.",
+      "3번 [정답] 정상적인 서비스 이용이 차단되었으므로 가용성 침해입니다.",
+      "4번 [오답] 화면의 색 표현과는 관련이 없습니다."
+    ]
+  },
+  {
+    "id": "com_46",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "출석 확인만 담당하는 사용자 계정을 만들 때 최소 권한 원칙에 가장 맞는 설정은?",
+    "options": [
+      "다른 사람의 계정 관리 권한까지 부여한다.",
+      "편의를 위해 모든 파일의 삭제 권한을 부여한다.",
+      "운영체제 관리자 권한을 기본으로 부여한다.",
+      "출석 확인 업무에 필요한 권한만 부여한다."
+    ],
+    "answer": 4,
+    "explanation": "최소 권한 원칙은 업무 수행에 꼭 필요한 범위로 권한을 제한하는 원칙입니다.",
+    "optionExplanations": [
+      "1번 [오답] 담당 업무에 필요하지 않은 계정 관리 권한까지 줄 이유가 없습니다.",
+      "2번 [오답] 불필요한 삭제 권한은 사고의 피해 범위를 넓힙니다.",
+      "3번 [오답] 업무에 관리자 권한이 필요하지 않다면 부여하지 않습니다.",
+      "4번 [정답] 필요한 업무 범위에 맞춰 권한을 제한합니다."
+    ]
+  },
+  {
+    "id": "com_47",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "프로그램을 직접 설치·관리하는 대신 제공자가 운영하는 온라인 문서 편집 서비스를 브라우저로 이용한다. 가장 가까운 클라우드 서비스 형태는?",
+    "options": [
+      "SaaS",
+      "컴퓨터 부품 임대만 제공하는 서비스",
+      "오프라인 전용 소프트웨어 판매",
+      "물리적 저장 매체 복제 서비스"
+    ],
+    "answer": 1,
+    "explanation": "SaaS는 제공자가 운영하는 응용 소프트웨어를 네트워크를 통해 서비스로 이용하는 형태입니다.",
+    "optionExplanations": [
+      "1번 [정답] 응용 프로그램 자체를 서비스로 제공받는 형태입니다.",
+      "2번 [오답] 프로그램을 온라인 서비스로 이용하는 사례와 다릅니다.",
+      "3번 [오답] 인터넷으로 제공되는 응용 서비스라는 조건과 다릅니다.",
+      "4번 [오답] 물리 매체의 복제 작업에 관한 설명입니다."
+    ]
+  },
+  {
+    "id": "com_48",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "행사 참가 신청을 받으면서 개인정보 수집을 줄이는 설계로 가장 적절한 것은?",
+    "options": [
+      "신청과 관계없는 가족 정보를 필수로 받는다.",
+      "참가 확인에 필요한 항목만 수집한다.",
+      "나중에 쓸 수 있도록 가능한 모든 정보를 받는다.",
+      "안내가 필요 없는데도 상세 집 주소를 필수로 받는다."
+    ],
+    "answer": 2,
+    "explanation": "개인정보 최소 수집 관점에서는 서비스 목적에 필요한 항목을 구분하고 불필요한 정보는 수집하지 않는 것이 적절합니다.",
+    "optionExplanations": [
+      "1번 [오답] 참가 신청 목적과 직접 관련이 없는 정보입니다.",
+      "2번 [정답] 목적 달성에 필요한 범위로 수집 항목을 줄이는 설계입니다.",
+      "3번 [오답] 불확실한 장래 용도만으로 수집 범위를 넓히는 방식입니다.",
+      "4번 [오답] 업무에 필요하지 않은 상세 주소를 필수로 요구하고 있습니다."
+    ]
+  },
+  {
+    "id": "com_49",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "하나의 물리적 컴퓨터에서 가상 머신 두 개를 만들어 각기 다른 운영체제를 실행하려 한다. 가장 관련 있는 기술은?",
+    "options": [
+      "문자 인식",
+      "전자 우편 필터링",
+      "가상화",
+      "영상 손실 압축"
+    ],
+    "answer": 3,
+    "explanation": "가상화는 물리적 컴퓨팅 자원을 논리적으로 나누어 가상 실행 환경을 제공하는 기술입니다.",
+    "optionExplanations": [
+      "1번 [오답] 이미지에서 문자를 읽어내는 기술입니다.",
+      "2번 [오답] 메일을 조건에 따라 분류하는 기능입니다.",
+      "3번 [정답] 가상 머신별로 운영체제를 실행할 환경을 제공합니다.",
+      "4번 [오답] 영상 파일 크기를 줄이는 기술입니다."
+    ]
+  },
+  {
+    "id": "com_50",
+    "subject": "컴퓨터 일반",
+    "subjectCode": 1,
+    "question": "온실의 온도 센서가 측정값을 네트워크로 보내고, 제어기가 그 값에 따라 환기 장치를 작동시킨다. 이 사례에 가장 가까운 개념은?",
+    "options": [
+      "순수 오프라인 문서 편집",
+      "광학 문자 인식",
+      "디스크 파티션 삭제",
+      "사물인터넷"
+    ],
+    "answer": 4,
+    "explanation": "사물인터넷은 센서·장치 등 사물이 네트워크를 통해 데이터를 주고받는 환경과 관련됩니다.",
+    "optionExplanations": [
+      "1번 [오답] 장치 사이의 네트워크 통신과 제어를 설명하지 못합니다.",
+      "2번 [오답] 문자 이미지의 인식이 핵심인 사례가 아닙니다.",
+      "3번 [오답] 저장 장치 구획의 삭제와 무관합니다.",
+      "4번 [정답] 센서와 제어 장치가 네트워크를 통해 연동되는 사례입니다."
+    ]
+  },
+  {
+    "id": "spr_31",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "그림의 C3 셀 수식 =$A3*B$1을 D5 셀로 복사했다. D5에 입력되는 수식은?",
+    "options": [
+      "=$A5*C$1",
+      "=$B5*C$1",
+      "=$A3*B$1",
+      "=$A5*B$1"
+    ],
+    "answer": 1,
+    "explanation": "복사 위치가 오른쪽 1열, 아래쪽 2행입니다. $A3은 열 A가 고정되어 $A5가 되고, B$1은 행 1이 고정되어 C$1이 됩니다.",
+    "optionExplanations": [
+      "1번 [정답] 고정하지 않은 행·열에만 이동량이 반영되었습니다.",
+      "2번 [오답] $A3의 열 A에는 절대 참조가 적용되어 B열로 이동하지 않습니다.",
+      "3번 [오답] 두 참조가 모두 절대 참조인 것이 아니므로 원래 수식이 유지되지 않습니다.",
+      "4번 [오답] B$1의 열 B는 상대 참조이므로 C열로 바뀝니다."
+    ],
+    "figureHtml": "<img class=\"question-figure\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDgiIGhlaWdodD0iMzE0IiB2aWV3Qm94PSIwIDAgNTA4IDMxNCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjEyIiBmaWxsPSIjZjhmYWZjIi8+PGcgZm9udC1mYW1pbHk9Ik5vdG8gU2FucyBDSksgS1IsIE1hbGd1biBHb3RoaWMsIHNhbnMtc2VyaWYiIGZpbGw9IiMxNzI1NTQiPjx0ZXh0IHg9IjE4IiB5PSIyOSIgZm9udC1zaXplPSIxNyIgZm9udC13ZWlnaHQ9IjcwMCI+7Zi87ZWpIOywuOyhsCDrs7Xsgqwg7JiI7IucPC90ZXh0PjxyZWN0IHg9IjE4IiB5PSI0OCIgd2lkdGg9IjQyIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iNzIiIGZvbnQtc2l6ZT0iMTQiPjwvdGV4dD48cmVjdCB4PSI2MCIgeT0iNDgiIHdpZHRoPSI5MCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iNjkiIHk9IjcyIiBmb250LXNpemU9IjE0Ij5BPC90ZXh0PjxyZWN0IHg9IjE1MCIgeT0iNDgiIHdpZHRoPSI4MCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMTU5IiB5PSI3MiIgZm9udC1zaXplPSIxNCI+QjwvdGV4dD48cmVjdCB4PSIyMzAiIHk9IjQ4IiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyMzkiIHk9IjcyIiBmb250LXNpemU9IjE0Ij5DPC90ZXh0PjxyZWN0IHg9IjM5MCIgeT0iNDgiIHdpZHRoPSIxMDAiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjM5OSIgeT0iNzIiIGZvbnQtc2l6ZT0iMTQiPkQ8L3RleHQ+PHJlY3QgeD0iMTgiIHk9Ijg2IiB3aWR0aD0iNDIiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTQiPjE8L3RleHQ+PHJlY3QgeD0iNjAiIHk9Ijg2IiB3aWR0aD0iOTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjY5IiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTQiPuuLqOqwgDwvdGV4dD48cmVjdCB4PSIxNTAiIHk9Ijg2IiB3aWR0aD0iODAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjE1OSIgeT0iMTEwIiBmb250LXNpemU9IjE0Ij4xMDwvdGV4dD48cmVjdCB4PSIyMzAiIHk9Ijg2IiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyMzkiIHk9IjExMCIgZm9udC1zaXplPSIxNCI+MjA8L3RleHQ+PHJlY3QgeD0iMzkwIiB5PSI4NiIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMzk5IiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTQiPjMwPC90ZXh0PjxyZWN0IHg9IjE4IiB5PSIxMjQiIHdpZHRoPSI0MiIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjciIHk9IjE0OCIgZm9udC1zaXplPSIxNCI+MjwvdGV4dD48cmVjdCB4PSI2MCIgeT0iMTI0IiB3aWR0aD0iOTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjY5IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPjI8L3RleHQ+PHJlY3QgeD0iMTUwIiB5PSIxMjQiIHdpZHRoPSI4MCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMTU5IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPjwvdGV4dD48cmVjdCB4PSIyMzAiIHk9IjEyNCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjM5IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPjwvdGV4dD48cmVjdCB4PSIzOTAiIHk9IjEyNCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMzk5IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPjwvdGV4dD48cmVjdCB4PSIxOCIgeT0iMTYyIiB3aWR0aD0iNDIiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSIxODYiIGZvbnQtc2l6ZT0iMTQiPjM8L3RleHQ+PHJlY3QgeD0iNjAiIHk9IjE2MiIgd2lkdGg9IjkwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSI2OSIgeT0iMTg2IiBmb250LXNpemU9IjE0Ij40PC90ZXh0PjxyZWN0IHg9IjE1MCIgeT0iMTYyIiB3aWR0aD0iODAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjE1OSIgeT0iMTg2IiBmb250LXNpemU9IjE0Ij48L3RleHQ+PHJlY3QgeD0iMjMwIiB5PSIxNjIiIHdpZHRoPSIxNjAiIGhlaWdodD0iMzgiIGZpbGw9IiNkY2ZjZTciIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjIzOSIgeT0iMTg2IiBmb250LXNpemU9IjE0Ij49JEEzKkIkMTwvdGV4dD48cmVjdCB4PSIzOTAiIHk9IjE2MiIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMzk5IiB5PSIxODYiIGZvbnQtc2l6ZT0iMTQiPjwvdGV4dD48cmVjdCB4PSIxOCIgeT0iMjAwIiB3aWR0aD0iNDIiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSIyMjQiIGZvbnQtc2l6ZT0iMTQiPjQ8L3RleHQ+PHJlY3QgeD0iNjAiIHk9IjIwMCIgd2lkdGg9IjkwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSI2OSIgeT0iMjI0IiBmb250LXNpemU9IjE0Ij42PC90ZXh0PjxyZWN0IHg9IjE1MCIgeT0iMjAwIiB3aWR0aD0iODAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjE1OSIgeT0iMjI0IiBmb250LXNpemU9IjE0Ij48L3RleHQ+PHJlY3QgeD0iMjMwIiB5PSIyMDAiIHdpZHRoPSIxNjAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjIzOSIgeT0iMjI0IiBmb250LXNpemU9IjE0Ij48L3RleHQ+PHJlY3QgeD0iMzkwIiB5PSIyMDAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjM5OSIgeT0iMjI0IiBmb250LXNpemU9IjE0Ij48L3RleHQ+PHJlY3QgeD0iMTgiIHk9IjIzOCIgd2lkdGg9IjQyIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMjYyIiBmb250LXNpemU9IjE0Ij41PC90ZXh0PjxyZWN0IHg9IjYwIiB5PSIyMzgiIHdpZHRoPSI5MCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iNjkiIHk9IjI2MiIgZm9udC1zaXplPSIxNCI+ODwvdGV4dD48cmVjdCB4PSIxNTAiIHk9IjIzOCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIxNTkiIHk9IjI2MiIgZm9udC1zaXplPSIxNCI+PC90ZXh0PjxyZWN0IHg9IjIzMCIgeT0iMjM4IiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyMzkiIHk9IjI2MiIgZm9udC1zaXplPSIxNCI+PC90ZXh0PjxyZWN0IHg9IjM5MCIgeT0iMjM4IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGNmY2U3IiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIzOTkiIHk9IjI2MiIgZm9udC1zaXplPSIxNCI+67O17IKsIOychOy5mDwvdGV4dD48L2c+PC9zdmc+\" alt=\"그림의 C3 셀 수식 =$A3*B$1을 D5 셀로 복사했다. D5에 입력되는 수식은?\">"
+  },
+  {
+    "id": "spr_32",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "그림의 자료에서 =SUMIF(A2:A6,\"기획\",C2:C6)의 결과는?",
+    "options": [
+      "300",
+      "500",
+      "600",
+      "900"
+    ],
+    "answer": 2,
+    "explanation": "A열이 기획인 2·4·6행의 C열 값을 더합니다. 120 + 180 + 200 = 500입니다.",
+    "optionExplanations": [
+      "1번 [오답] 기획 조건을 만족하는 세 행의 값을 모두 더하지 않은 값입니다.",
+      "2번 [정답] 기획 행의 금액 120, 180, 200을 더한 결과입니다.",
+      "3번 [오답] 기획 행의 합계 500과 다릅니다.",
+      "4번 [오답] 전체 금액의 합계이며 부서 조건을 적용하지 않은 값입니다."
+    ],
+    "figureHtml": "<img class=\"question-figure\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NDEiIGhlaWdodD0iMzE0IiB2aWV3Qm94PSIwIDAgNDQxIDMxNCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjEyIiBmaWxsPSIjZjhmYWZjIi8+PGcgZm9udC1mYW1pbHk9Ik5vdG8gU2FucyBDSksgS1IsIE1hbGd1biBHb3RoaWMsIHNhbnMtc2VyaWYiIGZpbGw9IiMxNzI1NTQiPjx0ZXh0IHg9IjE4IiB5PSIyOSIgZm9udC1zaXplPSIxNyIgZm9udC13ZWlnaHQ9IjcwMCI+67aA7ISc67OEIOyLoOyyrSDquIjslaE8L3RleHQ+PHJlY3QgeD0iMTgiIHk9IjQ4IiB3aWR0aD0iNDAiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSI3MiIgZm9udC1zaXplPSIxNCI+PC90ZXh0PjxyZWN0IHg9IjU4IiB5PSI0OCIgd2lkdGg9IjEyNSIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iNjciIHk9IjcyIiBmb250LXNpemU9IjE0Ij5BOiDrtoDshJw8L3RleHQ+PHJlY3QgeD0iMTgzIiB5PSI0OCIgd2lkdGg9IjEyNSIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMTkyIiB5PSI3MiIgZm9udC1zaXplPSIxNCI+Qjog64u064u5PC90ZXh0PjxyZWN0IHg9IjMwOCIgeT0iNDgiIHdpZHRoPSIxMTUiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjMxNyIgeT0iNzIiIGZvbnQtc2l6ZT0iMTQiPkM6IOq4iOyVoTwvdGV4dD48cmVjdCB4PSIxOCIgeT0iODYiIHdpZHRoPSI0MCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjciIHk9IjExMCIgZm9udC1zaXplPSIxNCI+MjwvdGV4dD48cmVjdCB4PSI1OCIgeT0iODYiIHdpZHRoPSIxMjUiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjY3IiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTQiPuq4sO2ajTwvdGV4dD48cmVjdCB4PSIxODMiIHk9Ijg2IiB3aWR0aD0iMTI1IiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIxOTIiIHk9IjExMCIgZm9udC1zaXplPSIxNCI+6rCA7JioPC90ZXh0PjxyZWN0IHg9IjMwOCIgeT0iODYiIHdpZHRoPSIxMTUiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjMxNyIgeT0iMTEwIiBmb250LXNpemU9IjE0Ij4xMjA8L3RleHQ+PHJlY3QgeD0iMTgiIHk9IjEyNCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMTQ4IiBmb250LXNpemU9IjE0Ij4zPC90ZXh0PjxyZWN0IHg9IjU4IiB5PSIxMjQiIHdpZHRoPSIxMjUiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjY3IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPuyatOyYgTwvdGV4dD48cmVjdCB4PSIxODMiIHk9IjEyNCIgd2lkdGg9IjEyNSIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMTkyIiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPuuCmOujqDwvdGV4dD48cmVjdCB4PSIzMDgiIHk9IjEyNCIgd2lkdGg9IjExNSIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMzE3IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPjI1MDwvdGV4dD48cmVjdCB4PSIxOCIgeT0iMTYyIiB3aWR0aD0iNDAiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSIxODYiIGZvbnQtc2l6ZT0iMTQiPjQ8L3RleHQ+PHJlY3QgeD0iNTgiIHk9IjE2MiIgd2lkdGg9IjEyNSIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iNjciIHk9IjE4NiIgZm9udC1zaXplPSIxNCI+6riw7ZqNPC90ZXh0PjxyZWN0IHg9IjE4MyIgeT0iMTYyIiB3aWR0aD0iMTI1IiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIxOTIiIHk9IjE4NiIgZm9udC1zaXplPSIxNCI+64uk7IacPC90ZXh0PjxyZWN0IHg9IjMwOCIgeT0iMTYyIiB3aWR0aD0iMTE1IiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIzMTciIHk9IjE4NiIgZm9udC1zaXplPSIxNCI+MTgwPC90ZXh0PjxyZWN0IHg9IjE4IiB5PSIyMDAiIHdpZHRoPSI0MCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjciIHk9IjIyNCIgZm9udC1zaXplPSIxNCI+NTwvdGV4dD48cmVjdCB4PSI1OCIgeT0iMjAwIiB3aWR0aD0iMTI1IiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSI2NyIgeT0iMjI0IiBmb250LXNpemU9IjE0Ij7smrTsmIE8L3RleHQ+PHJlY3QgeD0iMTgzIiB5PSIyMDAiIHdpZHRoPSIxMjUiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjE5MiIgeT0iMjI0IiBmb250LXNpemU9IjE0Ij7rnbzsm4A8L3RleHQ+PHJlY3QgeD0iMzA4IiB5PSIyMDAiIHdpZHRoPSIxMTUiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjMxNyIgeT0iMjI0IiBmb250LXNpemU9IjE0Ij4xNTA8L3RleHQ+PHJlY3QgeD0iMTgiIHk9IjIzOCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMjYyIiBmb250LXNpemU9IjE0Ij42PC90ZXh0PjxyZWN0IHg9IjU4IiB5PSIyMzgiIHdpZHRoPSIxMjUiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjY3IiB5PSIyNjIiIGZvbnQtc2l6ZT0iMTQiPuq4sO2ajTwvdGV4dD48cmVjdCB4PSIxODMiIHk9IjIzOCIgd2lkdGg9IjEyNSIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMTkyIiB5PSIyNjIiIGZvbnQtc2l6ZT0iMTQiPuuniOujqDwvdGV4dD48cmVjdCB4PSIzMDgiIHk9IjIzOCIgd2lkdGg9IjExNSIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMzE3IiB5PSIyNjIiIGZvbnQtc2l6ZT0iMTQiPjIwMDwvdGV4dD48L2c+PC9zdmc+\" alt=\"그림의 자료에서 =SUMIF(A2:A6,&quot;기획&quot;,C2:C6)의 결과는?\">"
+  },
+  {
+    "id": "spr_33",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "그림의 A1:A5에 COUNT, COUNTA, COUNTBLANK를 각각 적용했다. 결과를 그 순서대로 바르게 나열한 것은? A5에는 빈 문자열을 반환하는 수식이 있다.",
+    "options": [
+      "2, 3, 1",
+      "3, 4, 1",
+      "2, 4, 2",
+      "2, 5, 0"
+    ],
+    "answer": 3,
+    "explanation": "COUNT는 숫자 12와 0을 세어 2입니다. COUNTA는 수식이 있는 A5까지 포함하여 4, COUNTBLANK는 실제 빈 셀 A3과 빈 문자열을 반환하는 A5를 포함하여 2입니다.",
+    "optionExplanations": [
+      "1번 [오답] COUNTA는 빈 문자열을 반환하는 수식도 세며, COUNTBLANK도 그 셀을 셉니다.",
+      "2번 [오답] 숫자로 입력된 셀은 A1과 A4 두 개입니다.",
+      "3번 [정답] 숫자 두 개, 내용이 있는 셀 네 개, 빈 것으로 세는 셀 두 개입니다.",
+      "4번 [오답] A3은 실제 빈 셀이므로 COUNTA에서 제외되고 COUNTBLANK에 포함됩니다."
+    ],
+    "figureHtml": "<img class=\"question-figure\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNzEiIGhlaWdodD0iMzQ4IiB2aWV3Qm94PSIwIDAgMzcxIDM0OCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjEyIiBmaWxsPSIjZjhmYWZjIi8+PGcgZm9udC1mYW1pbHk9Ik5vdG8gU2FucyBDSksgS1IsIE1hbGd1biBHb3RoaWMsIHNhbnMtc2VyaWYiIGZpbGw9IiMxNzI1NTQiPjx0ZXh0IHg9IjE4IiB5PSIyOSIgZm9udC1zaXplPSIxNyIgZm9udC13ZWlnaHQ9IjcwMCI+7J6F66ClIOyDge2DnCDruYTqtZA8L3RleHQ+PHJlY3QgeD0iMTgiIHk9IjQ4IiB3aWR0aD0iODUiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSI3MiIgZm9udC1zaXplPSIxNCI+7IWAPC90ZXh0PjxyZWN0IHg9IjEwMyIgeT0iNDgiIHdpZHRoPSIyNTAiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjExMiIgeT0iNzIiIGZvbnQtc2l6ZT0iMTQiPu2RnOyLnCDqsJI8L3RleHQ+PHJlY3QgeD0iMTgiIHk9Ijg2IiB3aWR0aD0iODUiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTQiPkExPC90ZXh0PjxyZWN0IHg9IjEwMyIgeT0iODYiIHdpZHRoPSIyNTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjExMiIgeT0iMTEwIiBmb250LXNpemU9IjE0Ij4xMjwvdGV4dD48cmVjdCB4PSIxOCIgeT0iMTI0IiB3aWR0aD0iODUiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPkEyPC90ZXh0PjxyZWN0IHg9IjEwMyIgeT0iMTI0IiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIxMTIiIHk9IjE0OCIgZm9udC1zaXplPSIxNCI+7ISc7Jq4PC90ZXh0PjxyZWN0IHg9IjE4IiB5PSIxNjIiIHdpZHRoPSI4NSIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjciIHk9IjE4NiIgZm9udC1zaXplPSIxNCI+QTM8L3RleHQ+PHJlY3QgeD0iMTAzIiB5PSIxNjIiIHdpZHRoPSIyNTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjExMiIgeT0iMTg2IiBmb250LXNpemU9IjE0Ij48L3RleHQ+PHJlY3QgeD0iMTgiIHk9IjIwMCIgd2lkdGg9Ijg1IiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMjI0IiBmb250LXNpemU9IjE0Ij5BNDwvdGV4dD48cmVjdCB4PSIxMDMiIHk9IjIwMCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMTEyIiB5PSIyMjQiIGZvbnQtc2l6ZT0iMTQiPjA8L3RleHQ+PHJlY3QgeD0iMTgiIHk9IjIzOCIgd2lkdGg9Ijg1IiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMjYyIiBmb250LXNpemU9IjE0Ij5BNTwvdGV4dD48cmVjdCB4PSIxMDMiIHk9IjIzOCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMTEyIiB5PSIyNjIiIGZvbnQtc2l6ZT0iMTQiPjwvdGV4dD48L2c+PHRleHQgeD0iMTgiIHk9IjMzNCIgZm9udC1mYW1pbHk9Ik1hbGd1biBHb3RoaWMsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzQ3NTU2OSI+QTPsnYAg7Iuk7KCcIOu5iCDshYAgLyBBNSDsiJjsi506ID0mcXVvdDsmcXVvdDs8L3RleHQ+PC9zdmc+\" alt=\"그림의 A1:A5에 COUNT, COUNTA, COUNTBLANK를 각각 적용했다. 결과를 그 순서대로 바르게 나열한 것은? A5에는 빈 문자열을 반환하는 수식이 있다.\">"
+  },
+  {
+    "id": "spr_34",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "그림의 코드표에서 =VLOOKUP(\"K22\",A2:C4,3,FALSE)의 결과는?",
+    "options": [
+      "K22",
+      "펜",
+      "4",
+      "9"
+    ],
+    "answer": 4,
+    "explanation": "A2:C4의 첫 열에서 K22를 정확히 찾은 뒤, 같은 행의 세 번째 열 값을 반환하므로 9입니다.",
+    "optionExplanations": [
+      "1번 [오답] 찾는 기준값이며 반환할 세 번째 열의 값이 아닙니다.",
+      "2번 [오답] 두 번째 열의 값으로, 열 번호를 2로 지정했을 때의 결과입니다.",
+      "3번 [오답] K33 행의 수량입니다.",
+      "4번 [정답] K22 행의 세 번째 열인 C열 수량 9를 반환합니다."
+    ],
+    "figureHtml": "<img class=\"question-figure\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDYiIGhlaWdodD0iMjM4IiB2aWV3Qm94PSIwIDAgNDA2IDIzOCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjEyIiBmaWxsPSIjZjhmYWZjIi8+PGcgZm9udC1mYW1pbHk9Ik5vdG8gU2FucyBDSksgS1IsIE1hbGd1biBHb3RoaWMsIHNhbnMtc2VyaWYiIGZpbGw9IiMxNzI1NTQiPjx0ZXh0IHg9IjE4IiB5PSIyOSIgZm9udC1zaXplPSIxNyIgZm9udC13ZWlnaHQ9IjcwMCI+66y87ZKIIOy9lOuTnO2RnDwvdGV4dD48cmVjdCB4PSIxOCIgeT0iNDgiIHdpZHRoPSI0MCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjciIHk9IjcyIiBmb250LXNpemU9IjE0Ij48L3RleHQ+PHJlY3QgeD0iNTgiIHk9IjQ4IiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSI2NyIgeT0iNzIiIGZvbnQtc2l6ZT0iMTQiPkE6IOy9lOuTnDwvdGV4dD48cmVjdCB4PSIxNjgiIHk9IjQ4IiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIxNzciIHk9IjcyIiBmb250LXNpemU9IjE0Ij5COiDtkojrqoU8L3RleHQ+PHJlY3QgeD0iMjc4IiB5PSI0OCIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjg3IiB5PSI3MiIgZm9udC1zaXplPSIxNCI+Qzog7IiY65+JPC90ZXh0PjxyZWN0IHg9IjE4IiB5PSI4NiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMTEwIiBmb250LXNpemU9IjE0Ij4yPC90ZXh0PjxyZWN0IHg9IjU4IiB5PSI4NiIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iNjciIHk9IjExMCIgZm9udC1zaXplPSIxNCI+SzExPC90ZXh0PjxyZWN0IHg9IjE2OCIgeT0iODYiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjE3NyIgeT0iMTEwIiBmb250LXNpemU9IjE0Ij7rhbjtirg8L3RleHQ+PHJlY3QgeD0iMjc4IiB5PSI4NiIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjg3IiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTQiPjY8L3RleHQ+PHJlY3QgeD0iMTgiIHk9IjEyNCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMTQ4IiBmb250LXNpemU9IjE0Ij4zPC90ZXh0PjxyZWN0IHg9IjU4IiB5PSIxMjQiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjY3IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPksyMjwvdGV4dD48cmVjdCB4PSIxNjgiIHk9IjEyNCIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMTc3IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPu2OnDwvdGV4dD48cmVjdCB4PSIyNzgiIHk9IjEyNCIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjg3IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPjk8L3RleHQ+PHJlY3QgeD0iMTgiIHk9IjE2MiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMTg2IiBmb250LXNpemU9IjE0Ij40PC90ZXh0PjxyZWN0IHg9IjU4IiB5PSIxNjIiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjY3IiB5PSIxODYiIGZvbnQtc2l6ZT0iMTQiPkszMzwvdGV4dD48cmVjdCB4PSIxNjgiIHk9IjE2MiIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMTc3IiB5PSIxODYiIGZvbnQtc2l6ZT0iMTQiPu2MjOydvDwvdGV4dD48cmVjdCB4PSIyNzgiIHk9IjE2MiIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjg3IiB5PSIxODYiIGZvbnQtc2l6ZT0iMTQiPjQ8L3RleHQ+PC9nPjwvc3ZnPg==\" alt=\"그림의 코드표에서 =VLOOKUP(&quot;K22&quot;,A2:C4,3,FALSE)의 결과는?\">"
+  },
+  {
+    "id": "spr_35",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "그림의 명단에서 지역이 서울이고 판매액이 600 이상인 행만 추출한다. 해당하는 이름을 모두 고른 것은?",
+    "options": [
+      "가람, 라온",
+      "가람, 누리, 라온",
+      "가람, 다온, 라온",
+      "누리, 다온"
+    ],
+    "answer": 1,
+    "explanation": "두 조건을 동시에 만족해야 합니다. 서울인 가람(760)과 라온(610)만 판매액 600 이상을 충족합니다.",
+    "optionExplanations": [
+      "1번 [정답] 두 사람 모두 지역과 판매액 조건을 동시에 만족합니다.",
+      "2번 [오답] 누리는 판매액은 충분하지만 지역이 부산입니다.",
+      "3번 [오답] 다온은 서울이지만 판매액이 520으로 기준보다 작습니다.",
+      "4번 [오답] 누리는 지역 조건을, 다온은 판매액 조건을 만족하지 못합니다."
+    ],
+    "figureHtml": "<img class=\"question-figure\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNjYiIGhlaWdodD0iMzEwIiB2aWV3Qm94PSIwIDAgMzY2IDMxMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjEyIiBmaWxsPSIjZjhmYWZjIi8+PGcgZm9udC1mYW1pbHk9Ik5vdG8gU2FucyBDSksgS1IsIE1hbGd1biBHb3RoaWMsIHNhbnMtc2VyaWYiIGZpbGw9IiMxNzI1NTQiPjx0ZXh0IHg9IjE4IiB5PSIyOSIgZm9udC1zaXplPSIxNyIgZm9udC13ZWlnaHQ9IjcwMCI+6rOg6riJIO2VhO2EsCDsoIHsmqkg64yA7IOBPC90ZXh0PjxyZWN0IHg9IjE4IiB5PSI0OCIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjciIHk9IjcyIiBmb250LXNpemU9IjE0Ij7snbTrpoQ8L3RleHQ+PHJlY3QgeD0iMTI4IiB5PSI0OCIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMTM3IiB5PSI3MiIgZm9udC1zaXplPSIxNCI+7KeA7JetPC90ZXh0PjxyZWN0IHg9IjIzOCIgeT0iNDgiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI0NyIgeT0iNzIiIGZvbnQtc2l6ZT0iMTQiPu2MkOunpOyVoTwvdGV4dD48cmVjdCB4PSIxOCIgeT0iODYiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTQiPuqwgOuejDwvdGV4dD48cmVjdCB4PSIxMjgiIHk9Ijg2IiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIxMzciIHk9IjExMCIgZm9udC1zaXplPSIxNCI+7ISc7Jq4PC90ZXh0PjxyZWN0IHg9IjIzOCIgeT0iODYiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI0NyIgeT0iMTEwIiBmb250LXNpemU9IjE0Ij43NjA8L3RleHQ+PHJlY3QgeD0iMTgiIHk9IjEyNCIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjciIHk9IjE0OCIgZm9udC1zaXplPSIxNCI+64iE66asPC90ZXh0PjxyZWN0IHg9IjEyOCIgeT0iMTI0IiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIxMzciIHk9IjE0OCIgZm9udC1zaXplPSIxNCI+67aA7IKwPC90ZXh0PjxyZWN0IHg9IjIzOCIgeT0iMTI0IiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNDciIHk9IjE0OCIgZm9udC1zaXplPSIxNCI+ODAwPC90ZXh0PjxyZWN0IHg9IjE4IiB5PSIxNjIiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSIxODYiIGZvbnQtc2l6ZT0iMTQiPuuLpOyYqDwvdGV4dD48cmVjdCB4PSIxMjgiIHk9IjE2MiIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMTM3IiB5PSIxODYiIGZvbnQtc2l6ZT0iMTQiPuyEnOyauDwvdGV4dD48cmVjdCB4PSIyMzgiIHk9IjE2MiIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjQ3IiB5PSIxODYiIGZvbnQtc2l6ZT0iMTQiPjUyMDwvdGV4dD48cmVjdCB4PSIxOCIgeT0iMjAwIiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMjI0IiBmb250LXNpemU9IjE0Ij7rnbzsmKg8L3RleHQ+PHJlY3QgeD0iMTI4IiB5PSIyMDAiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjEzNyIgeT0iMjI0IiBmb250LXNpemU9IjE0Ij7shJzsmrg8L3RleHQ+PHJlY3QgeD0iMjM4IiB5PSIyMDAiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI0NyIgeT0iMjI0IiBmb250LXNpemU9IjE0Ij42MTA8L3RleHQ+PC9nPjx0ZXh0IHg9IjE4IiB5PSIyOTYiIGZvbnQtZmFtaWx5PSJNYWxndW4gR290aGljLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM0NzU1NjkiPuyhsOqxtDog7KeA7JetID0g7ISc7Jq4IEFORCDtjJDrp6TslaEgJmd0Oz0gNjAwPC90ZXh0Pjwvc3ZnPg==\" alt=\"그림의 명단에서 지역이 서울이고 판매액이 600 이상인 행만 추출한다. 해당하는 이름을 모두 고른 것은?\">"
+  },
+  {
+    "id": "spr_36",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "그림의 자료를 부서 오름차순으로 정렬하고, 같은 부서 안에서는 실적 내림차순으로 정렬한다. 위에서부터 이름의 순서는?",
+    "options": [
+      "지우 → 서연 → 하준 → 민수",
+      "서연 → 지우 → 민수 → 하준",
+      "민수 → 하준 → 서연 → 지우",
+      "서연 → 민수 → 하준 → 지우"
+    ],
+    "answer": 2,
+    "explanation": "부서 오름차순에서는 기획이 영업보다 앞입니다. 기획의 실적은 서연 95, 지우 70 순이고 영업은 민수 90, 하준 80 순입니다.",
+    "optionExplanations": [
+      "1번 [오답] 같은 부서 안에서 실적을 오름차순으로 배치한 순서입니다.",
+      "2번 [정답] 부서 우선 정렬 후 각 부서의 실적을 큰 값부터 배치했습니다.",
+      "3번 [오답] 영업 부서를 기획보다 먼저 배치했습니다.",
+      "4번 [오답] 부서 묶음을 유지하지 않고 실적만 큰 값부터 배치했습니다."
+    ],
+    "figureHtml": "<img class=\"question-figure\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNjYiIGhlaWdodD0iMjc2IiB2aWV3Qm94PSIwIDAgMzY2IDI3NiI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjEyIiBmaWxsPSIjZjhmYWZjIi8+PGcgZm9udC1mYW1pbHk9Ik5vdG8gU2FucyBDSksgS1IsIE1hbGd1biBHb3RoaWMsIHNhbnMtc2VyaWYiIGZpbGw9IiMxNzI1NTQiPjx0ZXh0IHg9IjE4IiB5PSIyOSIgZm9udC1zaXplPSIxNyIgZm9udC13ZWlnaHQ9IjcwMCI+64uk7KSRIOq4sOykgCDsoJXroKwg7KCEPC90ZXh0PjxyZWN0IHg9IjE4IiB5PSI0OCIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjciIHk9IjcyIiBmb250LXNpemU9IjE0Ij7snbTrpoQ8L3RleHQ+PHJlY3QgeD0iMTI4IiB5PSI0OCIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMTM3IiB5PSI3MiIgZm9udC1zaXplPSIxNCI+67aA7IScPC90ZXh0PjxyZWN0IHg9IjIzOCIgeT0iNDgiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI0NyIgeT0iNzIiIGZvbnQtc2l6ZT0iMTQiPuyLpOyggTwvdGV4dD48cmVjdCB4PSIxOCIgeT0iODYiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTQiPuuvvOyImDwvdGV4dD48cmVjdCB4PSIxMjgiIHk9Ijg2IiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIxMzciIHk9IjExMCIgZm9udC1zaXplPSIxNCI+7JiB7JeFPC90ZXh0PjxyZWN0IHg9IjIzOCIgeT0iODYiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI0NyIgeT0iMTEwIiBmb250LXNpemU9IjE0Ij45MDwvdGV4dD48cmVjdCB4PSIxOCIgeT0iMTI0IiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMTQ4IiBmb250LXNpemU9IjE0Ij7sp4DsmrA8L3RleHQ+PHJlY3QgeD0iMTI4IiB5PSIxMjQiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjEzNyIgeT0iMTQ4IiBmb250LXNpemU9IjE0Ij7quLDtmo08L3RleHQ+PHJlY3QgeD0iMjM4IiB5PSIxMjQiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI0NyIgeT0iMTQ4IiBmb250LXNpemU9IjE0Ij43MDwvdGV4dD48cmVjdCB4PSIxOCIgeT0iMTYyIiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMTg2IiBmb250LXNpemU9IjE0Ij7shJzsl7A8L3RleHQ+PHJlY3QgeD0iMTI4IiB5PSIxNjIiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjEzNyIgeT0iMTg2IiBmb250LXNpemU9IjE0Ij7quLDtmo08L3RleHQ+PHJlY3QgeD0iMjM4IiB5PSIxNjIiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI0NyIgeT0iMTg2IiBmb250LXNpemU9IjE0Ij45NTwvdGV4dD48cmVjdCB4PSIxOCIgeT0iMjAwIiB3aWR0aD0iMTEwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMjI0IiBmb250LXNpemU9IjE0Ij7tlZjspIA8L3RleHQ+PHJlY3QgeD0iMTI4IiB5PSIyMDAiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjEzNyIgeT0iMjI0IiBmb250LXNpemU9IjE0Ij7smIHsl4U8L3RleHQ+PHJlY3QgeD0iMjM4IiB5PSIyMDAiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI0NyIgeT0iMjI0IiBmb250LXNpemU9IjE0Ij44MDwvdGV4dD48L2c+PC9zdmc+\" alt=\"그림의 자료를 부서 오름차순으로 정렬하고, 같은 부서 안에서는 실적 내림차순으로 정렬한다. 위에서부터 이름의 순서는?\">"
+  },
+  {
+    "id": "spr_37",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "그림의 B2:D4에 조건부 서식을 적용한다. B2를 기준으로 수식 =B2>=80을 지정하면 조건을 만족하는 셀은 몇 개인가?",
+    "options": [
+      "3개",
+      "4개",
+      "5개",
+      "6개"
+    ],
+    "answer": 3,
+    "explanation": "상대 참조 수식이 각 셀에 적용됩니다. 80 이상인 값은 85, 90, 82, 80, 88로 다섯 개입니다.",
+    "optionExplanations": [
+      "1번 [오답] 세 행 각각에 있는 조건 만족 셀의 수를 모두 세어야 합니다.",
+      "2번 [오답] 조건의 >=에는 기준값 80도 포함됩니다.",
+      "3번 [정답] B2, D2, C3, D3, D4의 다섯 셀입니다.",
+      "4번 [오답] 79 이하인 네 셀은 조건을 만족하지 않습니다."
+    ],
+    "figureHtml": "<img class=\"question-figure\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNjMiIGhlaWdodD0iMjcyIiB2aWV3Qm94PSIwIDAgMzYzIDI3MiI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjEyIiBmaWxsPSIjZjhmYWZjIi8+PGcgZm9udC1mYW1pbHk9Ik5vdG8gU2FucyBDSksgS1IsIE1hbGd1biBHb3RoaWMsIHNhbnMtc2VyaWYiIGZpbGw9IiMxNzI1NTQiPjx0ZXh0IHg9IjE4IiB5PSIyOSIgZm9udC1zaXplPSIxNyIgZm9udC13ZWlnaHQ9IjcwMCI+7KGw6rG067aAIOyEnOyLnSDsoIHsmqkg7KCE7J2YIOygkOyImDwvdGV4dD48cmVjdCB4PSIxOCIgeT0iNDgiIHdpZHRoPSI0MiIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjciIHk9IjcyIiBmb250LXNpemU9IjE0Ij48L3RleHQ+PHJlY3QgeD0iNjAiIHk9IjQ4IiB3aWR0aD0iOTUiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjY5IiB5PSI3MiIgZm9udC1zaXplPSIxNCI+QjwvdGV4dD48cmVjdCB4PSIxNTUiIHk9IjQ4IiB3aWR0aD0iOTUiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjE2NCIgeT0iNzIiIGZvbnQtc2l6ZT0iMTQiPkM8L3RleHQ+PHJlY3QgeD0iMjUwIiB5PSI0OCIgd2lkdGg9Ijk1IiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNTkiIHk9IjcyIiBmb250LXNpemU9IjE0Ij5EPC90ZXh0PjxyZWN0IHg9IjE4IiB5PSI4NiIgd2lkdGg9IjQyIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMTEwIiBmb250LXNpemU9IjE0Ij4yPC90ZXh0PjxyZWN0IHg9IjYwIiB5PSI4NiIgd2lkdGg9Ijk1IiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSI2OSIgeT0iMTEwIiBmb250LXNpemU9IjE0Ij44NTwvdGV4dD48cmVjdCB4PSIxNTUiIHk9Ijg2IiB3aWR0aD0iOTUiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjE2NCIgeT0iMTEwIiBmb250LXNpemU9IjE0Ij43OTwvdGV4dD48cmVjdCB4PSIyNTAiIHk9Ijg2IiB3aWR0aD0iOTUiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI1OSIgeT0iMTEwIiBmb250LXNpemU9IjE0Ij45MDwvdGV4dD48cmVjdCB4PSIxOCIgeT0iMTI0IiB3aWR0aD0iNDIiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPjM8L3RleHQ+PHJlY3QgeD0iNjAiIHk9IjEyNCIgd2lkdGg9Ijk1IiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSI2OSIgeT0iMTQ4IiBmb250LXNpemU9IjE0Ij42MDwvdGV4dD48cmVjdCB4PSIxNTUiIHk9IjEyNCIgd2lkdGg9Ijk1IiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIxNjQiIHk9IjE0OCIgZm9udC1zaXplPSIxNCI+ODI8L3RleHQ+PHJlY3QgeD0iMjUwIiB5PSIxMjQiIHdpZHRoPSI5NSIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjU5IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPjgwPC90ZXh0PjxyZWN0IHg9IjE4IiB5PSIxNjIiIHdpZHRoPSI0MiIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjciIHk9IjE4NiIgZm9udC1zaXplPSIxNCI+NDwvdGV4dD48cmVjdCB4PSI2MCIgeT0iMTYyIiB3aWR0aD0iOTUiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjY5IiB5PSIxODYiIGZvbnQtc2l6ZT0iMTQiPjc4PC90ZXh0PjxyZWN0IHg9IjE1NSIgeT0iMTYyIiB3aWR0aD0iOTUiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjE2NCIgeT0iMTg2IiBmb250LXNpemU9IjE0Ij43NTwvdGV4dD48cmVjdCB4PSIyNTAiIHk9IjE2MiIgd2lkdGg9Ijk1IiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNTkiIHk9IjE4NiIgZm9udC1zaXplPSIxNCI+ODg8L3RleHQ+PC9nPjx0ZXh0IHg9IjE4IiB5PSIyNTgiIGZvbnQtZmFtaWx5PSJNYWxndW4gR290aGljLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM0NzU1NjkiPuyggeyaqSDrspTsnIQgQjI6RDQgLyDquLDspIAg7IWAIEIyPC90ZXh0Pjwvc3ZnPg==\" alt=\"그림의 B2:D4에 조건부 서식을 적용한다. B2를 기준으로 수식 =B2&gt;=80을 지정하면 조건을 만족하는 셀은 몇 개인가?\">"
+  },
+  {
+    "id": "spr_38",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "그림의 차트 구성에 관한 설명으로 옳은 것은?",
+    "options": [
+      "세로축은 1월·2월·3월의 범주를 나타낸다.",
+      "모든 막대는 하나의 전체에 대한 백분율만 나타낸다.",
+      "범례에는 월 이름 세 개가 표시되어 있다.",
+      "범례의 계획과 실적은 각각 데이터 계열을 나타낸다."
+    ],
+    "answer": 4,
+    "explanation": "범례의 계획과 실적은 두 데이터 계열을 구분합니다. 가로축에는 월 범주, 세로축에는 수치가 표시되어 있습니다.",
+    "optionExplanations": [
+      "1번 [오답] 월 범주는 가로축에 표시되어 있습니다.",
+      "2번 [오답] 그림은 수치를 비교하는 세로 막대 차트이며 백분율만을 표시하지 않습니다.",
+      "3번 [오답] 범례에는 계획과 실적 두 항목이 있습니다.",
+      "4번 [정답] 같은 색상의 막대가 같은 데이터 계열을 나타냅니다."
+    ],
+    "figureHtml": "<img class=\"question-figure\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1ODAiIGhlaWdodD0iMzMwIiB2aWV3Qm94PSIwIDAgNTgwIDMzMCI+PHJlY3Qgd2lkdGg9IjU4MCIgaGVpZ2h0PSIzMzAiIHJ4PSIxMiIgZmlsbD0iI2Y4ZmFmYyIvPjxnIGZvbnQtZmFtaWx5PSJNYWxndW4gR290aGljLHNhbnMtc2VyaWYiIGZpbGw9IiMxNzI1NTQiPjx0ZXh0IHg9IjE3NSIgeT0iMzAiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtd2VpZ2h0PSJib2xkIj7sm5Trs4Qg6rOE7ZqN6rO8IOyLpOyggTwvdGV4dD48cmVjdCB4PSIzNzAiIHk9IjQ5IiB3aWR0aD0iMTUiIGhlaWdodD0iMTIiIGZpbGw9IiMyNTYzZWIiLz48dGV4dCB4PSIzOTEiIHk9IjYwIiBmb250LXNpemU9IjEzIj7qs4Ttmo08L3RleHQ+PHJlY3QgeD0iNDUwIiB5PSI0OSIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEyIiBmaWxsPSIjMTBiOTgxIi8+PHRleHQgeD0iNDcxIiB5PSI2MCIgZm9udC1zaXplPSIxMyI+7Iuk7KCBPC90ZXh0PjxsaW5lIHgxPSI2NSIgeTE9IjI4MC4wIiB4Mj0iNTUwIiB5Mj0iMjgwLjAiIHN0cm9rZT0iI2NiZDVlMSIvPjx0ZXh0IHg9IjMzIiB5PSIyODUuMCIgZm9udC1zaXplPSIxMiI+MDwvdGV4dD48bGluZSB4MT0iNjUiIHkxPSIyMzAuMCIgeDI9IjU1MCIgeTI9IjIzMC4wIiBzdHJva2U9IiNjYmQ1ZTEiLz48dGV4dCB4PSIzMyIgeT0iMjM1LjAiIGZvbnQtc2l6ZT0iMTIiPjIwPC90ZXh0PjxsaW5lIHgxPSI2NSIgeTE9IjE4MC4wIiB4Mj0iNTUwIiB5Mj0iMTgwLjAiIHN0cm9rZT0iI2NiZDVlMSIvPjx0ZXh0IHg9IjMzIiB5PSIxODUuMCIgZm9udC1zaXplPSIxMiI+NDA8L3RleHQ+PGxpbmUgeDE9IjY1IiB5MT0iMTMwLjAiIHgyPSI1NTAiIHkyPSIxMzAuMCIgc3Ryb2tlPSIjY2JkNWUxIi8+PHRleHQgeD0iMzMiIHk9IjEzNS4wIiBmb250LXNpemU9IjEyIj42MDwvdGV4dD48bGluZSB4MT0iNjUiIHkxPSI4MC4wIiB4Mj0iNTUwIiB5Mj0iODAuMCIgc3Ryb2tlPSIjY2JkNWUxIi8+PHRleHQgeD0iMzMiIHk9Ijg1LjAiIGZvbnQtc2l6ZT0iMTIiPjgwPC90ZXh0PjxyZWN0IHg9IjEyMCIgeT0iMTgwLjAiIHdpZHRoPSIyOCIgaGVpZ2h0PSIxMDAuMCIgZmlsbD0iIzI1NjNlYiIvPjx0ZXh0IHg9IjEyNCIgeT0iMTcyLjAiIGZvbnQtc2l6ZT0iMTIiPjQwPC90ZXh0PjxyZWN0IHg9IjE1NSIgeT0iMTY3LjUiIHdpZHRoPSIyOCIgaGVpZ2h0PSIxMTIuNSIgZmlsbD0iIzEwYjk4MSIvPjx0ZXh0IHg9IjE1OSIgeT0iMTU5LjUiIGZvbnQtc2l6ZT0iMTIiPjQ1PC90ZXh0Pjx0ZXh0IHg9IjEzNiIgeT0iMzA1IiBmb250LXNpemU9IjE0Ij4x7JuUPC90ZXh0PjxyZWN0IHg9IjI3NSIgeT0iMTMwLjAiIHdpZHRoPSIyOCIgaGVpZ2h0PSIxNTAuMCIgZmlsbD0iIzI1NjNlYiIvPjx0ZXh0IHg9IjI3OSIgeT0iMTIyLjAiIGZvbnQtc2l6ZT0iMTIiPjYwPC90ZXh0PjxyZWN0IHg9IjMxMCIgeT0iMTU1LjAiIHdpZHRoPSIyOCIgaGVpZ2h0PSIxMjUuMCIgZmlsbD0iIzEwYjk4MSIvPjx0ZXh0IHg9IjMxNCIgeT0iMTQ3LjAiIGZvbnQtc2l6ZT0iMTIiPjUwPC90ZXh0Pjx0ZXh0IHg9IjI5MSIgeT0iMzA1IiBmb250LXNpemU9IjE0Ij4y7JuUPC90ZXh0PjxyZWN0IHg9IjQzMCIgeT0iMTU1LjAiIHdpZHRoPSIyOCIgaGVpZ2h0PSIxMjUuMCIgZmlsbD0iIzI1NjNlYiIvPjx0ZXh0IHg9IjQzNCIgeT0iMTQ3LjAiIGZvbnQtc2l6ZT0iMTIiPjUwPC90ZXh0PjxyZWN0IHg9IjQ2NSIgeT0iMTA1LjAiIHdpZHRoPSIyOCIgaGVpZ2h0PSIxNzUuMCIgZmlsbD0iIzEwYjk4MSIvPjx0ZXh0IHg9IjQ2OSIgeT0iOTcuMCIgZm9udC1zaXplPSIxMiI+NzA8L3RleHQ+PHRleHQgeD0iNDQ2IiB5PSIzMDUiIGZvbnQtc2l6ZT0iMTQiPjPsm5Q8L3RleHQ+PC9nPjwvc3ZnPg==\" alt=\"그림의 차트 구성에 관한 설명으로 옳은 것은?\">"
+  },
+  {
+    "id": "spr_39",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "그림에서 수량 B2만 바꾸어 매출 B3을 225000으로 만들려고 한다. 목표값 찾기 설정으로 옳은 것은?",
+    "options": [
+      "수식 셀 B3 / 찾는 값 225000 / 값을 바꿀 셀 B2",
+      "수식 셀 B2 / 찾는 값 225000 / 값을 바꿀 셀 B3",
+      "수식 셀 B3 / 찾는 값 15000 / 값을 바꿀 셀 B2",
+      "수식 셀 B1 / 찾는 값 225000 / 값을 바꿀 셀 B2"
+    ],
+    "answer": 1,
+    "explanation": "수식이 입력된 B3을 목표 결과 225000으로 만들기 위해 입력값 B2를 변경합니다. 필요한 수량은 225000 ÷ 15000 = 15입니다.",
+    "optionExplanations": [
+      "1번 [정답] 계산 결과 셀, 목표 결과, 변경할 입력 셀을 올바르게 구분했습니다.",
+      "2번 [오답] B2는 수식 결과 셀이 아닌 수량 입력 셀입니다.",
+      "3번 [오답] 찾는 값은 단가가 아니라 원하는 매출액 225000입니다.",
+      "4번 [오답] B1은 단가 입력 셀이고 계산 결과는 B3입니다."
+    ],
+    "figureHtml": "<img class=\"question-figure\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MTEiIGhlaWdodD0iMjcyIiB2aWV3Qm94PSIwIDAgNDExIDI3MiI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjEyIiBmaWxsPSIjZjhmYWZjIi8+PGcgZm9udC1mYW1pbHk9Ik5vdG8gU2FucyBDSksgS1IsIE1hbGd1biBHb3RoaWMsIHNhbnMtc2VyaWYiIGZpbGw9IiMxNzI1NTQiPjx0ZXh0IHg9IjE4IiB5PSIyOSIgZm9udC1zaXplPSIxNyIgZm9udC13ZWlnaHQ9IjcwMCI+66ek7LacIOqzhOyCsCDsi5ztirg8L3RleHQ+PHJlY3QgeD0iMTgiIHk9IjQ4IiB3aWR0aD0iNzAiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSI3MiIgZm9udC1zaXplPSIxNCI+7IWAPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSI0OCIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iOTciIHk9IjcyIiBmb250LXNpemU9IjE0Ij7rgrTsmqk8L3RleHQ+PHJlY3QgeD0iMTk4IiB5PSI0OCIgd2lkdGg9IjE5NSIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjA3IiB5PSI3MiIgZm9udC1zaXplPSIxNCI+6rCSIOuYkOuKlCDsiJjsi508L3RleHQ+PHJlY3QgeD0iMTgiIHk9Ijg2IiB3aWR0aD0iNzAiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTQiPkIxPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSI4NiIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iOTciIHk9IjExMCIgZm9udC1zaXplPSIxNCI+64uo6rCAPC90ZXh0PjxyZWN0IHg9IjE5OCIgeT0iODYiIHdpZHRoPSIxOTUiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjIwNyIgeT0iMTEwIiBmb250LXNpemU9IjE0Ij4xNTAwMDwvdGV4dD48cmVjdCB4PSIxOCIgeT0iMTI0IiB3aWR0aD0iNzAiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI3IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPkIyPC90ZXh0PjxyZWN0IHg9Ijg4IiB5PSIxMjQiIHdpZHRoPSIxMTAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9Ijk3IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPuyImOufiTwvdGV4dD48cmVjdCB4PSIxOTgiIHk9IjEyNCIgd2lkdGg9IjE5NSIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjA3IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPjEyPC90ZXh0PjxyZWN0IHg9IjE4IiB5PSIxNjIiIHdpZHRoPSI3MCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2RiZWFmZSIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjciIHk9IjE4NiIgZm9udC1zaXplPSIxNCI+QjM8L3RleHQ+PHJlY3QgeD0iODgiIHk9IjE2MiIgd2lkdGg9IjExMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iOTciIHk9IjE4NiIgZm9udC1zaXplPSIxNCI+66ek7LacPC90ZXh0PjxyZWN0IHg9IjE5OCIgeT0iMTYyIiB3aWR0aD0iMTk1IiBoZWlnaHQ9IjM4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyMDciIHk9IjE4NiIgZm9udC1zaXplPSIxNCI+PUIxKkIyPC90ZXh0PjwvZz48dGV4dCB4PSIxOCIgeT0iMjU4IiBmb250LWZhbWlseT0iTWFsZ3VuIEdvdGhpYyxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNDc1NTY5Ij7tmITsnqwg66ek7LacIDE4MDAwMCAvIOuqqe2RnCDrp6TstpwgMjI1MDAwPC90ZXh0Pjwvc3ZnPg==\" alt=\"그림에서 수량 B2만 바꾸어 매출 B3을 225000으로 만들려고 한다. 목표값 찾기 설정으로 옳은 것은?\">"
+  },
+  {
+    "id": "spr_40",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "상대 참조로 매크로를 기록하면서 B2에서 D3으로 활성 셀을 이동했다. 같은 상대 이동만 수행하는 매크로를 E5에서 실행하면 도착하는 셀은?",
+    "options": [
+      "F6",
+      "G6",
+      "G5",
+      "D3"
+    ],
+    "answer": 2,
+    "explanation": "기록한 상대 이동은 오른쪽 두 열, 아래쪽 한 행입니다. E5에 같은 이동을 적용하면 G6이 됩니다.",
+    "optionExplanations": [
+      "1번 [오답] 오른쪽 한 열만 이동한 위치입니다.",
+      "2번 [정답] E열에서 두 열 오른쪽은 G열, 5행에서 한 행 아래는 6행입니다.",
+      "3번 [오답] 열 이동은 반영했지만 행 이동을 반영하지 않았습니다.",
+      "4번 [오답] 상대 이동이므로 기록 당시의 절대 위치 D3으로 이동하지 않습니다."
+    ],
+    "figureHtml": "<img class=\"question-figure\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOTYiIGhlaWdodD0iMjM0IiB2aWV3Qm94PSIwIDAgMzk2IDIzNCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcng9IjEyIiBmaWxsPSIjZjhmYWZjIi8+PGcgZm9udC1mYW1pbHk9Ik5vdG8gU2FucyBDSksgS1IsIE1hbGd1biBHb3RoaWMsIHNhbnMtc2VyaWYiIGZpbGw9IiMxNzI1NTQiPjx0ZXh0IHg9IjE4IiB5PSIyOSIgZm9udC1zaXplPSIxNyIgZm9udC13ZWlnaHQ9IjcwMCI+66ek7YGs66Gc7J2YIOyDgeuMgCDsnbTrj5k8L3RleHQ+PHJlY3QgeD0iMTgiIHk9IjQ4IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iNzIiIGZvbnQtc2l6ZT0iMTQiPuq1rOu2hDwvdGV4dD48cmVjdCB4PSIxMTgiIHk9IjQ4IiB3aWR0aD0iMTMwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIxMjciIHk9IjcyIiBmb250LXNpemU9IjE0Ij7si5zsnpEg7IWAPC90ZXh0PjxyZWN0IHg9IjI0OCIgeT0iNDgiIHdpZHRoPSIxMzAiIGhlaWdodD0iMzgiIGZpbGw9IiNkYmVhZmUiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI1NyIgeT0iNzIiIGZvbnQtc2l6ZT0iMTQiPuuPhOywqSDshYA8L3RleHQ+PHJlY3QgeD0iMTgiIHk9Ijg2IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMTEwIiBmb250LXNpemU9IjE0Ij7quLDroZ08L3RleHQ+PHJlY3QgeD0iMTE4IiB5PSI4NiIgd2lkdGg9IjEzMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMTI3IiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTQiPkIyPC90ZXh0PjxyZWN0IHg9IjI0OCIgeT0iODYiIHdpZHRoPSIxMzAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjI1NyIgeT0iMTEwIiBmb250LXNpemU9IjE0Ij5EMzwvdGV4dD48cmVjdCB4PSIxOCIgeT0iMTI0IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjM4IiBmaWxsPSIjZGJlYWZlIiBzdHJva2U9IiM5NGEzYjgiLz48dGV4dCB4PSIyNyIgeT0iMTQ4IiBmb250LXNpemU9IjE0Ij7snqzsi6Ttlok8L3RleHQ+PHJlY3QgeD0iMTE4IiB5PSIxMjQiIHdpZHRoPSIxMzAiIGhlaWdodD0iMzgiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzk0YTNiOCIvPjx0ZXh0IHg9IjEyNyIgeT0iMTQ4IiBmb250LXNpemU9IjE0Ij5FNTwvdGV4dD48cmVjdCB4PSIyNDgiIHk9IjEyNCIgd2lkdGg9IjEzMCIgaGVpZ2h0PSIzOCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjOTRhM2I4Ii8+PHRleHQgeD0iMjU3IiB5PSIxNDgiIGZvbnQtc2l6ZT0iMTQiPj88L3RleHQ+PC9nPjx0ZXh0IHg9IjE4IiB5PSIyMjAiIGZvbnQtZmFtaWx5PSJNYWxndW4gR290aGljLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM0NzU1NjkiPuydtOuPmTog7Jik66W47Kq9IDLsl7QsIOyVhOuemOyqvSAx7ZaJPC90ZXh0Pjwvc3ZnPg==\" alt=\"상대 참조로 매크로를 기록하면서 B2에서 D3으로 활성 셀을 이동했다. 같은 상대 이동만 수행하는 매크로를 E5에서 실행하면 도착하는 셀은?\">"
+  },
+  {
+    "id": "spr_41",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "A1:A3에 수량 2, 4, 3이 있고 B1:B3에 단가 1500, 2000, 1000이 있다. =SUMPRODUCT(A1:A3,B1:B3)의 결과는?",
+    "options": [
+      "9",
+      "4500",
+      "14000",
+      "40500"
+    ],
+    "answer": 3,
+    "explanation": "같은 위치의 수량과 단가를 곱한 뒤 합합니다. 2×1500 + 4×2000 + 3×1000 = 14000입니다.",
+    "optionExplanations": [
+      "1번 [오답] 수량만 더한 값입니다.",
+      "2번 [오답] 단가만 더한 값입니다.",
+      "3번 [정답] 각 행의 곱 3000, 8000, 3000을 합한 값입니다.",
+      "4번 [오답] 수량 합계 9와 단가 합계 4500을 곱한 값으로, 행별 곱의 합과 다릅니다."
+    ]
+  },
+  {
+    "id": "spr_42",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "A1:A5에 텍스트 A1, A12, AB, B1, A가 차례로 저장되어 있다. =COUNTIF(A1:A5,\"A?\")의 결과는?",
+    "options": [
+      "1",
+      "3",
+      "4",
+      "2"
+    ],
+    "answer": 4,
+    "explanation": "?는 임의의 한 문자를 뜻합니다. A 뒤에 정확히 한 문자가 있는 A1과 AB만 조건을 만족하여 결과는 2입니다.",
+    "optionExplanations": [
+      "1번 [오답] A1 외에 AB도 조건을 만족합니다.",
+      "2번 [오답] A12는 A 뒤에 문자가 두 개 있으므로 제외됩니다.",
+      "3번 [오답] A로 시작하는 모든 길이를 세는 조건 A*와 다릅니다.",
+      "4번 [정답] A1과 AB 두 셀만 A?에 대응합니다."
+    ]
+  },
+  {
+    "id": "spr_43",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "B2:B9는 부서, C2:C9는 등급, D2:D9는 지급액이다. 부서가 영업이면서 등급이 A인 지급액의 합계를 구하는 수식은?",
+    "options": [
+      "=SUMIFS(D2:D9,B2:B9,\"영업\",C2:C9,\"A\")",
+      "=SUMIFS(B2:B9,D2:D9,\"영업\",C2:C9,\"A\")",
+      "=COUNTIFS(B2:B9,\"영업\",C2:C9,\"A\")",
+      "=SUMIF(B2:B9,\"영업\",D2:D9)"
+    ],
+    "answer": 1,
+    "explanation": "SUMIFS는 합계 범위를 먼저 쓰고 조건 범위와 조건을 짝지어 지정합니다. 두 조건을 동시에 만족하는 D열의 값을 합산합니다.",
+    "optionExplanations": [
+      "1번 [정답] 합계 범위와 두 조건 범위를 올바르게 지정했습니다.",
+      "2번 [오답] 합계 범위와 부서 조건 범위가 뒤바뀌었습니다.",
+      "3번 [오답] 조건을 만족하는 행의 수를 셀 뿐 지급액을 더하지 않습니다.",
+      "4번 [오답] 부서 조건만 적용하며 등급 조건이 없습니다."
+    ]
+  },
+  {
+    "id": "spr_44",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "수식 =ROUNDUP(-12.341,2)의 결과는?",
+    "options": [
+      "-12.34",
+      "-12.35",
+      "-12.30",
+      "12.35"
+    ],
+    "answer": 2,
+    "explanation": "ROUNDUP은 0에서 멀어지는 방향으로 올림합니다. 소수점 이하 두 자리까지 남기므로 -12.35입니다.",
+    "optionExplanations": [
+      "1번 [오답] 소수점 두 자리까지 일반 반올림한 값입니다.",
+      "2번 [정답] 음수도 절댓값이 커지는 방향으로 올림합니다.",
+      "3번 [오답] 소수점 두 자리까지 올림한 결과가 아닙니다.",
+      "4번 [오답] 함수 실행으로 음수의 부호가 양수로 바뀌지 않습니다."
+    ]
+  },
+  {
+    "id": "spr_45",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "수식 =DAY(DATE(2028,3,0))의 결과는? 2028년은 윤년이다.",
+    "options": [
+      "0",
+      "28",
+      "29",
+      "31"
+    ],
+    "answer": 3,
+    "explanation": "DATE에서 3월의 0일은 그 전날인 2월 마지막 날을 뜻합니다. 윤년인 2028년 2월은 29일까지 있으므로 DAY 결과는 29입니다.",
+    "optionExplanations": [
+      "1번 [오답] DATE가 날짜를 정규화하므로 0이라는 일자를 그대로 반환하지 않습니다.",
+      "2번 [오답] 윤년이 아닌 해의 2월 마지막 일자입니다.",
+      "3번 [정답] 2028년 2월 29일의 일자 29를 반환합니다.",
+      "4번 [오답] 3월 마지막 날이 아니라 3월 1일의 전날을 구합니다."
+    ]
+  },
+  {
+    "id": "spr_46",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "A1에 텍스트 CBT-2026이 입력되어 있다. =MID(A1,5,4)의 결과는?",
+    "options": [
+      "CBT-",
+      "-202",
+      "026",
+      "2026"
+    ],
+    "answer": 4,
+    "explanation": "MID는 지정한 시작 위치부터 지정한 수만큼 문자를 추출합니다. 다섯 번째 문자인 2부터 네 글자를 가져오므로 2026입니다.",
+    "optionExplanations": [
+      "1번 [오답] 첫 번째 문자부터 네 글자를 가져온 결과입니다.",
+      "2번 [오답] 네 번째 문자부터 네 글자를 가져온 결과입니다.",
+      "3번 [오답] 여섯 번째 문자부터 남은 세 글자에 해당합니다.",
+      "4번 [정답] 다섯 번째부터 네 글자인 2026을 추출합니다."
+    ]
+  },
+  {
+    "id": "spr_47",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "B2가 75, C2가 58일 때 =IF(AND(B2>=60,C2>=60),\"통과\",\"재학습\")의 결과는?",
+    "options": [
+      "재학습",
+      "통과",
+      "TRUE",
+      "FALSE"
+    ],
+    "answer": 1,
+    "explanation": "AND는 두 조건이 모두 참일 때만 참입니다. C2가 60 미만이므로 AND는 거짓이며 IF의 거짓 결과인 재학습을 반환합니다.",
+    "optionExplanations": [
+      "1번 [정답] 두 번째 점수가 기준 미만이므로 거짓일 때의 텍스트를 반환합니다.",
+      "2번 [오답] 두 점수가 모두 60 이상일 때만 반환됩니다.",
+      "3번 [오답] 최종 함수 IF는 지정한 텍스트 중 하나를 반환합니다.",
+      "4번 [오답] AND의 중간 결과는 FALSE이지만 IF의 최종 반환값은 재학습입니다."
+    ]
+  },
+  {
+    "id": "spr_48",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "A1:A3에 숫자 4, 0, 8이 차례로 입력되어 있다. =AVERAGE(A1:A3)의 결과는?",
+    "options": [
+      "6",
+      "4",
+      "12",
+      "0"
+    ],
+    "answer": 2,
+    "explanation": "숫자 0도 평균 계산에 포함됩니다. (4 + 0 + 8) ÷ 3 = 4입니다.",
+    "optionExplanations": [
+      "1번 [오답] 0을 제외하고 평균을 계산한 값입니다.",
+      "2번 [정답] 세 숫자의 합 12를 숫자 개수 3으로 나눈 값입니다.",
+      "3번 [오답] 합계이며 평균은 아닙니다.",
+      "4번 [오답] 범위에 0이 있다고 해서 평균이 0이 되지는 않습니다."
+    ]
+  },
+  {
+    "id": "spr_49",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "수식 =IFERROR(A1/B1,\"확인\")에 관한 설명으로 옳은 것은?",
+    "options": [
+      "계산 결과가 0이면 언제나 확인을 반환한다.",
+      "수식의 계산 결과와 관계없이 확인만 반환한다.",
+      "A1/B1의 계산이 오류이면 확인을 반환한다.",
+      "정상 계산 결과는 모두 삭제하고 빈 셀로 만든다."
+    ],
+    "answer": 3,
+    "explanation": "IFERROR는 첫 번째 인수의 계산 결과가 오류일 때 두 번째 인수를 반환하고, 오류가 아니면 계산 결과를 그대로 반환합니다.",
+    "optionExplanations": [
+      "1번 [오답] 숫자 0은 그 자체로 오류가 아니므로 오류 처리 조건이 아닙니다.",
+      "2번 [오답] 오류가 없는 경우에는 계산 결과를 그대로 반환합니다.",
+      "3번 [정답] 0으로 나누기 등 오류가 발생했을 때 지정한 텍스트를 반환합니다.",
+      "4번 [오답] 정상 결과를 삭제하는 함수가 아닙니다."
+    ]
+  },
+  {
+    "id": "spr_50",
+    "subject": "스프레드시트 일반",
+    "subjectCode": 2,
+    "question": "여러 장으로 인쇄되는 긴 표에서 워크시트의 첫 번째 행을 모든 페이지의 위쪽에 반복 인쇄하려 한다. 가장 적절한 기능은?",
+    "options": [
+      "셀 병합",
+      "데이터 통합",
+      "중복 항목 제거",
+      "인쇄 제목의 반복할 행 지정"
+    ],
+    "answer": 4,
+    "explanation": "인쇄 제목에서 반복할 행에 첫 번째 행을 지정하면 여러 페이지에 걸쳐 표의 제목 행을 반복 인쇄할 수 있습니다.",
+    "optionExplanations": [
+      "1번 [오답] 셀을 합치는 기능이며 페이지별 반복 인쇄 설정이 아닙니다.",
+      "2번 [오답] 여러 범위의 데이터를 요약하는 기능입니다.",
+      "3번 [오답] 중복 데이터를 정리하는 기능입니다.",
+      "4번 [정답] 각 인쇄 페이지에서 같은 제목 행을 반복하도록 설정합니다."
     ]
   }
 ];
