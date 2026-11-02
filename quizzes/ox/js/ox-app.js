@@ -61,6 +61,89 @@
     btnRestart: document.getElementById('btn-restart')
   };
 
+
+  // 정답 효과는 OX에서 정답을 확정한 뒤에만 실행합니다.
+  const EFFECTS_STORAGE_KEY = 'smart_learning_quiz_effects';
+  let celebrationEnabled = true;
+  let celebrationTimer = null;
+  let effectToggleButton = null;
+
+  function prefersReducedMotion() {
+    return typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  function clearCelebration() {
+    if (celebrationTimer !== null) {
+      clearTimeout(celebrationTimer);
+      celebrationTimer = null;
+    }
+    document.querySelectorAll('.celebration-layer').forEach(layer => layer.remove());
+  }
+
+  function setupEffectControl() {
+    try { celebrationEnabled = localStorage.getItem(EFFECTS_STORAGE_KEY) !== 'off'; } catch (e) { /* 저장소 없이도 사용 가능 */ }
+    const main = document.querySelector('.ox-main-container');
+    if (!main) return;
+    const row = document.createElement('div');
+    row.className = 'effect-control-row';
+    effectToggleButton = document.createElement('button');
+    effectToggleButton.type = 'button';
+    effectToggleButton.className = 'effect-toggle';
+    const updateControl = () => {
+      const reduced = prefersReducedMotion();
+      effectToggleButton.disabled = reduced;
+      effectToggleButton.textContent = reduced ? '정답 효과: 동작 줄임' : (celebrationEnabled ? '정답 효과 켜짐' : '정답 효과 꺼짐');
+      effectToggleButton.setAttribute('aria-pressed', String(celebrationEnabled && !reduced));
+      effectToggleButton.title = reduced ? '기기의 동작 줄이기 설정을 따르고 있습니다.' : '정답을 맞혔을 때 나오는 폭죽·꽃잎 효과를 켜거나 끕니다.';
+    };
+    effectToggleButton.addEventListener('click', () => {
+      if (prefersReducedMotion()) return;
+      celebrationEnabled = !celebrationEnabled;
+      clearCelebration();
+      try { localStorage.setItem(EFFECTS_STORAGE_KEY, celebrationEnabled ? 'on' : 'off'); } catch (e) { /* 일시 설정으로 유지 */ }
+      updateControl();
+    });
+    row.appendChild(effectToggleButton);
+    main.prepend(row);
+    updateControl();
+    if (typeof window.matchMedia === 'function') {
+      const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (typeof preference.addEventListener === 'function') preference.addEventListener('change', () => { clearCelebration(); updateControl(); });
+    }
+    document.addEventListener('visibilitychange', () => { if (document.hidden) clearCelebration(); });
+  }
+
+  function celebrateCorrectAnswer(streak) {
+    clearCelebration();
+    if (!celebrationEnabled || prefersReducedMotion()) return;
+    const petals = streak % 2 === 0;
+    const layer = document.createElement('div');
+    layer.className = 'celebration-layer';
+    layer.setAttribute('aria-hidden', 'true');
+    const colors = petals ? ['#f0a9c3','#e2b1e8','#f5c8d9','#c9b3ee'] : ['#a88bda','#69bda5','#e6b75c','#ed9db5','#78afdb'];
+    const width = window.innerWidth || 1024;
+    const height = window.innerHeight || 768;
+    const count = width < 520 ? 26 : 44;
+    for (let i = 0; i < count; i += 1) {
+      const piece = document.createElement('span');
+      piece.className = 'celebration-piece ' + (petals ? 'petal' : 'confetti');
+      piece.style.backgroundColor = colors[i % colors.length];
+      const dx = petals ? (Math.random() - .5) * 120 : (Math.random() - .5) * Math.min(width * 1.15, 1050);
+      const spin = (Math.random() - .5) * 900;
+      piece.style.setProperty('--dx', dx + 'px');
+      piece.style.setProperty('--mid-x', (dx * .55) + 'px');
+      piece.style.setProperty('--dy', (height * .7 + Math.random() * 80) + 'px');
+      piece.style.setProperty('--spin', spin + 'deg');
+      piece.style.setProperty('--mid-spin', (spin * .4) + 'deg');
+      piece.style.setProperty('--delay', (Math.random() * .22) + 's');
+      piece.style.setProperty('--duration', (petals ? 1.8 + Math.random() * .45 : 1.35 + Math.random() * .3) + 's');
+      if (petals) piece.style.left = (3 + Math.random() * 94) + '%';
+      layer.appendChild(piece);
+    }
+    document.body.appendChild(layer);
+    celebrationTimer = setTimeout(clearCelebration, 2600);
+  }
+
   // 초기화
   document.addEventListener('DOMContentLoaded', init);
 
@@ -71,6 +154,7 @@
     }
     state.allQuestions = OX_QUESTION_BANK;
 
+    setupEffectControl();
     bindEvents();
   }
 
@@ -144,6 +228,7 @@
    * 문제 렌더링
    */
   function renderQuestion() {
+    clearCelebration();
     const q = state.quizList[state.currentIndex];
     const total = state.quizList.length;
     const currentNum = state.currentIndex + 1;
@@ -216,6 +301,7 @@
     // 카드 애니메이션
     if (isCorrect) {
       elements.statementCard.classList.add('correct-anim');
+      celebrateCorrectAnswer(state.currentStreak);
     } else {
       elements.statementCard.classList.add('wrong-anim');
     }
@@ -230,11 +316,11 @@
   function showFeedback(question, isCorrect) {
     if (isCorrect) {
       elements.feedbackBadge.className = 'result-badge correct';
-      elements.feedbackBadge.innerHTML = '⭕ 정답입니다!';
+      elements.feedbackBadge.innerHTML = '✓ 정답입니다!';
       elements.correctionBanner.classList.add('hidden');
     } else {
       elements.feedbackBadge.className = 'result-badge wrong';
-      elements.feedbackBadge.innerHTML = '❌ 틀렸습니다!';
+      elements.feedbackBadge.innerHTML = '× 틀렸습니다!';
 
       if (question.correction) {
         elements.correctionText.textContent = question.correction;
@@ -274,6 +360,7 @@
    * 결과 화면 표시
    */
   function showResults() {
+    clearCelebration();
     elements.quizScreen.classList.add('hidden');
     elements.resultScreen.classList.remove('hidden');
 
@@ -322,6 +409,7 @@
    * 틀린 문제만 다시 풀기
    */
   function retryWrongQuestions() {
+    clearCelebration();
     const wrongQuestions = state.userAnswers.filter(a => !a.isCorrect).map(a => a.question);
     if (wrongQuestions.length === 0) return;
 
@@ -340,6 +428,7 @@
    * 처음 설정 화면으로 복귀
    */
   function resetToSetup() {
+    clearCelebration();
     elements.resultScreen.classList.add('hidden');
     elements.quizScreen.classList.add('hidden');
     elements.setupScreen.classList.remove('hidden');
@@ -362,6 +451,7 @@
    * 키보드 단축키
    */
   function handleKeydown(e) {
+    if (e.target && e.target.closest && e.target.closest('.effect-toggle')) return;
     // 퀴즈 화면이 활성화되어 있을 때만 동작
     if (elements.quizScreen.classList.contains('hidden')) return;
 
