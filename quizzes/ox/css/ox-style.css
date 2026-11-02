@@ -790,3 +790,78 @@ body {
   }
 }
 
+
+/* 밝은 OX 퀴즈와 짧은 정답 축하 효과 */
+:root {
+  --primary-blue: #7656c3; --primary-indigo: #6141af;
+  --navy-900: #3d3054; --navy-800: #55446d;
+  --color-o: #18836a; --color-o-hover: #146f5a; --color-o-light: #e8f9ef; --color-o-border: #a9dbc8;
+  --color-x: #ce5b75; --color-x-hover: #b94762; --color-x-light: #fff0f3; --color-x-border: #f0c2cf;
+  --slate-600: #6b6179; --slate-800: #443750; --slate-200: #e6dfee;
+  --shadow-md: 0 6px 24px #654a8210; --shadow-lg: 0 12px 30px #654a8214;
+}
+body { background: linear-gradient(140deg,#fff9ee 0%,#f6efff 55%,#effaf4 100%); color: #40334e; }
+.ox-header { background: #fffffff5; color: #49345f; border-bottom: 1px solid #e9dfef; box-shadow: 0 3px 16px #6950c508; }
+.btn-nav-home { color: #6e5887; background: #f6f0fc; border-color: #e5d8ef; }
+.btn-nav-home:hover { color: #50366e; background: #eee2fb; }
+.badge-ox { background: #eee1fb; color: #7a4c9d; }
+.setup-card, .statement-card, .results-card { border-color: #e7dfed; }
+.setup-hero-icon { background: linear-gradient(130deg,#f5d894,#e3c8fb); box-shadow: 0 7px 18px #b28bce26; }
+.btn-start, .btn-start-quiz { background: linear-gradient(135deg,#8c6bd1,#7051bb); }
+.btn-next-question, .btn-res-restart { background: #7b5abe; box-shadow: 0 5px 14px #7b5abe1a; }
+.btn-next-question:hover, .btn-res-restart:hover { background: #6846aa; }
+.choice-radio:checked + .choice-label { background: #f1e9fd; border-color: #b49bdc; }
+.progress-fill { background: linear-gradient(90deg,#ab8ce4,#7bc7b0); }
+.btn-ox { border-radius: 24px; }
+.btn-o { background: #f3fcf7; }
+.btn-x { background: #fff6f8; }
+.btn-o.selected { background: var(--color-o); }
+.btn-x.selected { background: var(--color-x); }
+.ox-footer { background: #f4eef9; color: #776884; }
+.effect-control-row { display: flex; justify-content: flex-end; margin: -6px 0 14px; }
+.effect-toggle { font: inherit; font-size: .8rem; color: #70558d; background: #ffffffc9; border: 1px solid #dfd2ec; border-radius: 999px; padding: 7px 13px; cursor: pointer; }
+.effect-toggle:hover { background: #f1e7fb; }
+.effect-toggle:disabled { cursor: default; color: #7b7384; }
+button:focus-visible, a:focus-visible { outline: 3px solid #ac8bd6; outline-offset: 4px; }
+.celebration-layer { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 1000; contain: strict; }
+.celebration-piece { position: absolute; display: block; pointer-events: none; opacity: 0; will-change: transform, opacity; }
+.celebration-piece.confetti { top: 38%; left: 50%; width: 9px; height: 13px; border-radius: 3px; animation: confetti-burst var(--duration) cubic-bezier(.16,.6,.34,1) var(--delay) both; }
+.celebration-piece.petal { top: -24px; width: 12px; height: 17px; border-radius: 85% 10% 85% 10%; animation: petal-fall var(--duration) ease-in var(--delay) both; }
+@keyframes confetti-burst {
+  0% { opacity: 0; transform: translate3d(0,0,0) rotate(0deg) scale(.3); }
+  12% { opacity: .96; }
+  35% { opacity: .95; transform: translate3d(var(--mid-x),-120px,0) rotate(var(--mid-spin)) scale(1); }
+  100% { opacity: 0; transform: translate3d(var(--dx),var(--dy),0) rotate(var(--spin)) scale(.7); }
+}
+@keyframes petal-fall {
+  0% { opacity: 0; transform: translate3d(0,-15px,0) rotate(0deg); }
+  12% { opacity: .9; }
+  82% { opacity: .85; }
+  100% { opacity: 0; transform: translate3d(var(--dx),110vh,0) rotate(var(--spin)); }
+}
+@media (max-width: 520px) {
+  .header-inner, .brand-wrap { flex-wrap: wrap; gap: .5rem; }
+  .header-title { width: 100%; font-size: .95rem; }
+  .effect-control-row { margin-top: -10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .celebration-layer { display: none !important; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+.setup-title { word-break: keep-all; line-height: 1.4; }
+@media (max-width: 520px) {
+  .setup-title { font-size: 1.4rem; }
+  .header-inner { flex-wrap: nowrap; align-items: flex-start; }
+  .brand-wrap { flex: 1; min-width: 0; }
+}
+/* 핵심 O/X 표시는 기기의 이모지 글꼴과 관계없이 또렷하게 그립니다. */
+.ox-symbol { position: relative; display: block; width: 58px; height: 58px; font-size: 0; }
+.btn-o .ox-symbol::before { content: ''; position: absolute; inset: 3px; border: 6px solid currentColor; border-radius: 50%; }
+.btn-x .ox-symbol::before, .btn-x .ox-symbol::after { content: ''; position: absolute; left: 3px; top: 26px; width: 52px; height: 6px; border-radius: 4px; background: currentColor; transform: rotate(45deg); }
+.btn-x .ox-symbol::after { transform: rotate(-45deg); }
+.btn-ox.selected:disabled { opacity: 1; }
+.setup-hero-icon { font-size: 0; }
+.setup-hero-icon::before { content: ''; width: 30px; height: 40px; background: #8d5f9c; clip-path: polygon(54% 0, 8% 56%, 43% 56%, 33% 100%, 94% 39%, 58% 39%, 70% 0); }
+.btn-start-quiz { background: linear-gradient(135deg,#8060c6,#6b4cb3); box-shadow: 0 5px 15px #7b5abe25; }
+.btn-start-quiz:hover { box-shadow: 0 7px 18px #7b5abe35; }
+.header-inner > div:last-child .btn-nav-home { background: #ede4fa !important; border-color: #d9c8ee !important; color: #6b4b93; }
