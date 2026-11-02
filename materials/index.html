@@ -60,19 +60,44 @@
 
   <!-- 메인 영역 -->
   <main class="main-wrapper">
-    <div class="placeholder-box">
-      <div class="placeholder-icon">📚</div>
-      <h2 class="placeholder-title">학습 자료 검수 및 업로드 준비 중</h2>
-      <p class="placeholder-text">
-        컴퓨터활용능력 2급 필기 빈출 개념 15쪽 요약 PDF 및 필수 함수 단축키 치트시트를 정성껏 검수하고 있습니다.<br>
-        실제 기출 변형 40문항이 탑재된 실전 모의고사를 먼저 응시해 보세요!
-      </p>
-      <a href="../exams/com2-cbt/index.html" class="btn-primary-hero" style="display: inline-flex;">
-        <span>컴활 2급 실전 CBT 풀러 가기</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-      </a>
+    <div class="cards-grid">
+      <article class="learning-card active-card">
+          <div>
+            <div class="card-header-row">
+              <div class="card-icon icon-amber">
+                📌
+              </div>
+              <span class="card-status-pill status-active">PDF 제공</span>
+            </div>
+            <div class="card-body">
+              <span class="card-subject">공식 & 단축키 치트시트</span>
+              <h3 class="card-title">스프레드시트 필수 함수 & 단축키 총정리</h3>
+              <p class="card-description">
+                Excel 2021 Windows 기준 핵심 함수 42개의 문법·예제·주의점과 단축키 50개를 정리한 13쪽 PDF 학습자료입니다.
+              </p>
+              <div class="card-meta-list">
+                <span class="meta-chip">⌨️ 필수 단축키 50선</span>
+                <span class="meta-chip">🧮 함수 42개 예제</span>
+                <span class="meta-chip">📑 A4 13쪽</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a class="btn-card-start" href="./files/excel_functions_shortcuts_2021.pdf"
+              download="스프레드시트_함수_단축키_2021.pdf">
+              <span>PDF 다운로드</span>
+            </a>
+          </div>
+        </article>
+      <article class="learning-card pending-card">
+        <div>
+          <div class="card-header-row"><div class="card-icon icon-amber">📖</div><span class="card-status-pill status-pending">준비 중</span></div>
+          <div class="card-body"><span class="card-subject">추가 학습 자료</span><h3 class="card-title">컴활 2급 필기 개념 요약집</h3>
+            <p class="card-description">개념 요약 자료는 추가로 준비하고 있습니다. 먼저 완성된 함수·단축키 PDF와 CBT를 활용해 보세요.</p>
+          </div>
+        </div>
+        <div class="card-footer"><span class="btn-card-pending" aria-disabled="true">추가 자료 준비 중</span></div>
+      </article>
     </div>
   </main>
 
